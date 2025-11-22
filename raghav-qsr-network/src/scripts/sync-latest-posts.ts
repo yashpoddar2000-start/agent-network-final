@@ -98,6 +98,9 @@ function transformApifyPost(apifyPost: ApifyPost, nextId: string): OurPost {
 
   const urnId = apifyPost.urn?.activity_urn || apifyPost.full_urn;
 
+  // Auto-determine isViral based on engagement threshold
+  const isViral = engagementScore >= 100;
+
   return {
     id: nextId,
     text: text,
@@ -112,6 +115,7 @@ function transformApifyPost(apifyPost: ApifyPost, nextId: string): OurPost {
     hasMedia: hasMedia,
     textLength: text.length,
     lineCount: text.split('\n').length,
+    isViral: isViral,
     url: apifyPost.url,
     urn: urnId,
     // Leave these EMPTY for manual analysis
