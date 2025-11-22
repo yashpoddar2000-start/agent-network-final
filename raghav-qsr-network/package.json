@@ -14,7 +14,9 @@
     "analyze:low": "tsx src/analysis/analyze-post.ts --test-low",
     "sync": "tsx src/scripts/sync-latest-posts.ts",
     "fetch-apify": "tsx src/scripts/fetch-apify-posts.ts",
-    "transform-apify": "tsx src/scripts/transform-apify-data.ts"
+    "transform-apify": "tsx src/scripts/transform-apify-data.ts",
+    "test-eval": "tsx src/tests/test-eval.ts",
+    "validate-evals": "tsx src/scripts/validate-evals.ts"
   },
   "keywords": [
     "mastra",

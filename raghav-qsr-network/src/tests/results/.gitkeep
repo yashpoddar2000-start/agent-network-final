@@ -1,0 +1,9 @@
+# Test Results Directory
+
+This directory stores test output files from the eval system.
+
+## Files
+
+- `test-eval-results.json` - Quick smoke test results (4 tests)
+- `validation-results.json` - Full validation results (all 56 posts)
+

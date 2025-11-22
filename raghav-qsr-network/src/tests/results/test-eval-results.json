@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-11-22T15:47:42.720Z",
+  "summary": {
+    "totalTests": 3,
+    "passedTests": 3,
+    "failedTests": 0,
+    "passRate": 100
+  },
+  "tests": [
+    {
+      "testNumber": 1,
+      "testName": "Quality Post - Shocking Number Contrast",
+      "postId": "P001",
+      "expected": "score >= 0.85",
+      "score": 1,
+      "passed": true,
+      "reason": "The post presents a perfect example of shocking number contrast with a $8.5M vs $500K revenue gap between Chick-fil-A and Subway. This 17x difference is absurd enough to immediately stop scrolling and create curiosity about the underlying reasons. The numbers are prominently featured in the hook, ensuring they capture attention right away. Additionally, the post reveals hidden competitive dynamics by contrasting the business models and operational strategies of the two franchises, explaining why such a significant revenue gap exists.",
+      "recommendations": []
+    },
+    {
+      "testNumber": 3,
+      "testName": "Sample Generated Post - Shocking Number Contrast",
+      "postId": "SAMPLE",
+      "expected": "score >= 0.8",
+      "score": 0.9,
+      "passed": true,
+      "reason": "The post presents a strong numerical contrast with Chipotle making $10B/year compared to Qdoba's $800M, which is a 12.5x difference. This gap is significant enough to stop scrolling and creates curiosity about the reasons behind such a disparity. The numbers are placed right at the beginning, effectively capturing attention. The post also reveals hidden competitive dynamics through strategic decisions that led to the gap.",
+      "recommendations": [
+        "Enhance the shock factor by adding more context or comparisons, such as industry averages or other competitors, to amplify the contrast.",
+        "Include additional specific numbers related to the impact of the decisions, such as digital sales growth or customer retention rates, to deepen the analysis."
+      ]
+    },
+    {
+      "testNumber": 4,
+      "testName": "Quality Post - Master Viral Quality Eval",
+      "postId": "P053",
+      "expected": "score >= 0.85",
+      "score": 0.8920000000000001,
+      "passed": true,
+      "isViralWorthy": true
+    }
+  ]
+}
