@@ -12,11 +12,12 @@ config();
  * - Tools (Exa research, financial extraction)
  * - Evals (custom leverage signals)
  * - Memory (resource-scoped learning from 51 posts)
+ * 
+ * Current Status: Phase 1 - Building Custom Evals
  */
 
 export const mastra = new Mastra({
-  // Will add agents, tools, workflows, and networks as we build
+  // Agents, tools, workflows, and networks will be added as we build
 });
 
-console.log('✅ Raghav QSR Network initialized');
-
+console.log('✅ Raghav QSR Network - Mastra initialized');

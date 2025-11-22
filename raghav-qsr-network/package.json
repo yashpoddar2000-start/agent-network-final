@@ -4,9 +4,17 @@
   "description": "Production agent network for Raghav's viral QSR content generation",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch",
+    "dev": "tsx watch src/mastra/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "add-post": "tsx src/scripts/add-post.ts",
+    "refresh-data": "tsx src/scripts/refresh-data.ts",
+    "analyze": "tsx src/analysis/analyze-post.ts",
+    "analyze:high": "tsx src/analysis/analyze-post.ts --test-high",
+    "analyze:low": "tsx src/analysis/analyze-post.ts --test-low",
+    "sync": "tsx src/scripts/sync-latest-posts.ts",
+    "fetch-apify": "tsx src/scripts/fetch-apify-posts.ts",
+    "transform-apify": "tsx src/scripts/transform-apify-data.ts"
   },
   "keywords": [
     "mastra",
@@ -18,11 +26,12 @@
   "license": "MIT",
   "dependencies": {
     "@mastra/core": "latest",
-    "@mastra/memory": "latest",
     "@mastra/evals": "latest",
+    "@mastra/memory": "latest",
+    "apify-client": "^2.20.0",
+    "dotenv": "^16.4.5",
     "openai": "^4.0.0",
-    "zod": "^3.22.4",
-    "dotenv": "^16.4.5"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
@@ -30,4 +39,3 @@
     "typescript": "^5.3.3"
   }
 }
-

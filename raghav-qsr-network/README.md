@@ -1,6 +1,6 @@
 # 🚀 Raghav QSR Network - Production System
 
-**Status:** In Development  
+**Status:** Phase 1 - Building Custom Evals  
 **Purpose:** Generate 30 viral LinkedIn posts for Raghav using agent networks and custom leverage evals
 
 ---
@@ -25,50 +25,103 @@ Production agent network that:
 
 ---
 
-## 🏗️ Architecture
+## 📁 Project Structure
 
 ```
-Raghav Network
-├── Agents (QSR-focused)
-│   ├── Research Agent (with Exa API)
-│   ├── Writer Agent (contrarian style)
-│   └── Editor Agent (Raghav's voice)
-├── Tools
-│   ├── Exa Research Tool (real API)
-│   └── Financial Data Extractor
-├── Evals (Custom Leverage Signals)
-│   ├── Contrarian Opening Eval
-│   ├── Financial Data Eval
-│   ├── Gap Insight Eval
-│   ├── Raghav Voice Eval
-│   └── Anti-Pattern Eval
-└── Memory
-    └── Resource-scoped (learns from all 51 posts)
+raghav-qsr-network/
+├── data/
+│   ├── posts/
+│   │   ├── all-posts.json          # MAIN FILE - add posts here
+│   │   ├── viral-posts.json        # Auto-generated
+│   │   └── flop-posts.json         # Auto-generated
+│   └── README.md
+│
+├── src/
+│   ├── analysis/                   # Post analysis tools
+│   │   ├── scorers/               # Engagement scorers
+│   │   ├── utils/                 # Utilities (split, stats)
+│   │   └── analyze-post.ts        # CLI analyzer
+│   │
+│   ├── scripts/                   # Helper scripts
+│   │   ├── add-post.ts           # Add new posts
+│   │   └── refresh-data.ts       # Regenerate splits
+│   │
+│   └── mastra/                    # Production system
+│       ├── index.ts              # Main Mastra instance
+│       ├── evals/                # Phase 1: Custom evals
+│       ├── agents/               # Phase 3: QSR agents
+│       └── tools/                # Phase 2: Exa tool
+│
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
 ---
 
-## 🚀 Setup
+## 🚀 Quick Start
 
-1. Copy `.env.example` to `.env` and add API keys
-2. Install dependencies: `npm install`
-3. Run development: `npm run dev`
+### Setup
+```bash
+npm install
+cp .env.example .env  # Add your API keys
+```
+
+### Working with Posts
+
+**Add a new post:**
+```bash
+npm run add-post
+```
+
+**Refresh viral/flop splits:**
+```bash
+npm run refresh-data
+```
+
+**Analyze a post:**
+```bash
+npm run analyze              # Custom post
+npm run analyze:high         # Test top performer
+npm run analyze:low          # Test low performer
+```
 
 ---
 
-## 📝 Development Phases
+## 🏗️ Development Phases
 
-### Phase 1: Custom Evals (PRIORITY)
-Build leverage signal evals based on 51 posts analysis
+### ✅ Phase 0: Infrastructure (COMPLETE)
+- File structure organized
+- Data management utilities
+- Post analysis tools
 
-### Phase 2: Exa Integration
+### 🔨 Phase 1: Custom Evals (CURRENT)
+Build leverage signal evals based on 51 posts analysis:
+- Contrarian Opening Eval
+- Financial Data Eval
+- Gap Insight Eval
+- Raghav Voice Eval
+- Anti-Pattern Eval
+
+### 📋 Phase 2: Exa Integration
 Real research with financial data extraction
 
-### Phase 3: Memory Loading
+### 📋 Phase 3: Memory Loading
 Load 51 posts into resource-scoped memory
 
-### Phase 4: Generation Pipeline
+### 📋 Phase 4: Generation Pipeline
 Generate 30 posts with quality loops (0.85+ score threshold)
+
+---
+
+## 📊 Data Stats
+
+- **Total Posts:** 51
+- **Viral Posts:** ~30 (engagement > 100)
+- **Flop Posts:** ~21 (engagement < 100)
+- **Engagement Gap:** ~10x between viral and flop
+
+See `data/README.md` for detailed data structure.
 
 ---
 
@@ -80,4 +133,3 @@ Generate 30 posts with quality loops (0.85+ score threshold)
 ---
 
 Built with [Mastra](https://mastra.ai) 🎯
-

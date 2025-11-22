@@ -5,4 +5,5 @@ dist/
 .DS_Store
 *.db
 generated-output/
+data/raw/
 
