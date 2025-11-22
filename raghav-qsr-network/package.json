@@ -16,7 +16,12 @@
     "fetch-apify": "tsx src/scripts/fetch-apify-posts.ts",
     "transform-apify": "tsx src/scripts/transform-apify-data.ts",
     "test-eval": "tsx src/tests/test-eval.ts",
-    "validate-evals": "tsx src/scripts/validate-evals.ts"
+    "test-sample": "tsx src/tests/strategic-sample-test.ts",
+    "test-adversarial": "tsx src/tests/adversarial-eval-test.ts",
+    "test-manual-posts": "tsx src/tests/test-manual-posts.ts",
+    "validate-evals": "tsx src/tests/validate-evals.ts",
+    "inspect-training": "tsx src/tests/inspect-training-data.ts",
+    "analyze-tokens": "tsx src/tests/analyze-prompt-tokens.ts"
   },
   "keywords": [
     "mastra",

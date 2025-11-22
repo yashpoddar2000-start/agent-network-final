@@ -15,10 +15,15 @@ import { broadAppealEval } from './anti-patterns/broad-appeal-eval';
 import { forensicDetailEval } from './anti-patterns/forensic-detail-eval';
 
 /**
- * Master Viral Quality Eval
+ * Master Viral Quality Eval - REDESIGNED
  * 
- * Combines all signal and anti-pattern evals into final score
- * Score 0.85+ = viral-worthy, ready to publish
+ * NEW SYSTEM LOGIC (matches reality):
+ * - Viral posts have 2-3 GREAT signals (0.80+), not all signals
+ * - Execution matters more than quantity
+ * - No major penalties (anti-patterns)
+ * 
+ * PASS CRITERIA:
+ * - 2+ great signals (0.80+) AND no deal-breaker penalties
  */
 export class ViralQualityMetric extends Metric {
   async measure(input: string, output: string): Promise<MetricResult> {
@@ -31,34 +36,36 @@ export class ViralQualityMetric extends Metric {
       strengths: [],
       weaknesses: [],
       recommendations: [],
+      greatSignals: [], // NEW: Track which signals are great (0.80+)
+      goodSignals: [],  // NEW: Track which signals are good (0.65-0.79)
     };
 
     // Run all signal evals
     console.log('\n📈 LEVERAGE SIGNALS:\n');
     
     const signalEvals = [
-      { name: 'shocking_number_contrast', eval: shockingNumberContrastEval, weight: 0.15 },
-      { name: 'side_by_side_comparison', eval: sideBySideComparisonEval, weight: 0.12 },
-      { name: 'contrarian_with_proof', eval: contrarianWithProofEval, weight: 0.12 },
-      { name: 'detailed_breakdown', eval: detailedBreakdownEval, weight: 0.15 },
-      { name: 'reveals_hidden_mechanism', eval: revealsHiddenMechanismEval, weight: 0.10 },
-      { name: 'comeback_story', eval: comebackStoryEval, weight: 0.08 },
-      { name: 'david_vs_goliath', eval: davidVsGoliathEval, weight: 0.08 },
+      { name: 'shocking_number_contrast', eval: shockingNumberContrastEval },
+      { name: 'side_by_side_comparison', eval: sideBySideComparisonEval },
+      { name: 'contrarian_with_proof', eval: contrarianWithProofEval },
+      { name: 'detailed_breakdown', eval: detailedBreakdownEval },
+      { name: 'reveals_hidden_mechanism', eval: revealsHiddenMechanismEval },
+      { name: 'comeback_story', eval: comebackStoryEval },
+      { name: 'david_vs_goliath', eval: davidVsGoliathEval },
     ];
 
-    let signalScore = 0;
-    for (const { name, eval: evalInstance, weight } of signalEvals) {
+    for (const { name, eval: evalInstance } of signalEvals) {
       const result = await evalInstance.measure(input, output);
       results.signals[name] = result;
-      
-      const contribution = result.score * weight;
-      signalScore += contribution;
 
-      // Track strengths (score >= 0.8)
-      if (result.score >= 0.8) {
+      // NEW LOGIC: Categorize signals by quality
+      if (result.score >= 0.80) {
+        results.greatSignals.push(name);
         results.strengths.push(`✓ ${name.replace(/_/g, ' ')} (${result.score.toFixed(2)})`);
-      } else if (result.score < 0.5) {
-        results.weaknesses.push(`✗ Missing ${name.replace(/_/g, ' ')} (${result.score.toFixed(2)})`);
+      } else if (result.score >= 0.65) {
+        results.goodSignals.push(name);
+        results.strengths.push(`~ ${name.replace(/_/g, ' ')} (${result.score.toFixed(2)}) - good`);
+      } else if (result.score < 0.50) {
+        results.weaknesses.push(`✗ Weak ${name.replace(/_/g, ' ')} (${result.score.toFixed(2)})`);
         if (result.info && result.info.recommendations?.length > 0) {
           results.recommendations.push(...result.info.recommendations);
         }
@@ -74,35 +81,86 @@ export class ViralQualityMetric extends Metric {
       { name: 'forensic_detail', eval: forensicDetailEval },
     ];
 
-    let antiPatternPenalty = 0;
+    const majorPenalties: string[] = [];
+    let totalPenalty = 0;
+
     for (const { name, eval: evalInstance } of antiPatternEvals) {
       const result = await evalInstance.measure(input, output);
       results.antiPatterns[name] = result;
       
       const penalty = (result.info && result.info.penalty) ? result.info.penalty : (1.0 - result.score);
-      antiPatternPenalty += penalty;
+      totalPenalty += penalty;
 
-      if (penalty > 0) {
-        results.weaknesses.push(`✗ Issue: ${name.replace(/_/g, ' ')} (-${penalty.toFixed(2)})`);
-        if (result.info && result.info.recommendations?.length > 0) {
-          results.recommendations.push(...result.info.recommendations);
-        }
+      // Track major penalties (deal-breakers)
+      if (penalty >= 0.25) {
+        majorPenalties.push(name);
+        results.weaknesses.push(`🚨 MAJOR ISSUE: ${name.replace(/_/g, ' ')} (-${penalty.toFixed(2)})`);
+      } else if (penalty > 0) {
+        results.weaknesses.push(`⚠️  Minor issue: ${name.replace(/_/g, ' ')} (-${penalty.toFixed(2)})`);
+      }
+
+      if (result.info && result.info.recommendations?.length > 0) {
+        results.recommendations.push(...result.info.recommendations);
       }
     }
 
-    // Calculate final score
-    // Base: 0.20 (starting point)
-    // Signals: up to 0.80 (weighted sum)
-    // Anti-patterns: subtract penalties
-    const baseScore = 0.20;
-    const finalScore = Math.max(0, Math.min(1, baseScore + signalScore - antiPatternPenalty));
+    // NEW SCORING SYSTEM (based on reality)
+    // Rule: Need 2-3 GREAT signals (0.80+) AND no major penalties
+    const greatCount = results.greatSignals.length;
+    const goodCount = results.goodSignals.length;
+    const hasMajorPenalties = majorPenalties.length > 0;
 
-    const isViralWorthy = finalScore >= 0.85;
+    let isViralWorthy = false;
+    let finalScore = 0;
+    let passReason = '';
+
+    // Tier 1: 3+ great signals = definitely viral
+    if (greatCount >= 3 && !hasMajorPenalties) {
+      isViralWorthy = true;
+      finalScore = 0.95 - (totalPenalty * 0.5);
+      passReason = `${greatCount} excellent signals`;
+    }
+    // Tier 2: 2 great signals = viral (most common pattern)
+    else if (greatCount >= 2 && !hasMajorPenalties) {
+      isViralWorthy = true;
+      finalScore = 0.85 - (totalPenalty * 0.5);
+      passReason = `${greatCount} excellent signals`;
+    }
+    // Tier 3: 1 great + 2 good signals = viral
+    else if (greatCount >= 1 && goodCount >= 2 && !hasMajorPenalties) {
+      isViralWorthy = true;
+      finalScore = 0.80 - (totalPenalty * 0.5);
+      passReason = `${greatCount} excellent + ${goodCount} good signals`;
+    }
+    // Tier 4: 4+ good signals = borderline viral
+    else if (goodCount >= 4 && !hasMajorPenalties) {
+      isViralWorthy = true;
+      finalScore = 0.75 - (totalPenalty * 0.5);
+      passReason = `${goodCount} good signals (high volume)`;
+    }
+    // Otherwise: Not viral-worthy
+    else {
+      isViralWorthy = false;
+      // Calculate score based on signal quality
+      const signalScore = (greatCount * 0.30) + (goodCount * 0.15);
+      finalScore = Math.max(0, signalScore - totalPenalty);
+      passReason = `Only ${greatCount} excellent, ${goodCount} good signals (need 2+ excellent)`;
+    }
+
+    // Cap score at 1.0
+    finalScore = Math.min(1.0, finalScore);
 
     console.log('\n' + '='.repeat(60));
     console.log(`\n🎯 FINAL SCORE: ${finalScore.toFixed(2)}/1.00`);
     console.log(`   Status: ${isViralWorthy ? '✅ VIRAL-WORTHY' : '❌ NEEDS IMPROVEMENT'}`);
-    console.log(`   Threshold: 0.85+\n`);
+    console.log(`   Logic: ${passReason}\n`);
+
+    // NEW: Show signal breakdown
+    console.log('📊 SIGNAL BREAKDOWN:');
+    console.log(`   🔥 Excellent signals (0.80+): ${greatCount} → [${results.greatSignals.map((s: string) => s.replace(/_/g, ' ')).join(', ') || 'none'}]`);
+    console.log(`   ✓  Good signals (0.65-0.79): ${goodCount} → [${results.goodSignals.map((s: string) => s.replace(/_/g, ' ')).join(', ') || 'none'}]`);
+    console.log(`   🚫 Major penalties: ${majorPenalties.length} → [${majorPenalties.map((s: string) => s.replace(/_/g, ' ')).join(', ') || 'none'}]`);
+    console.log('');
 
     if (results.strengths.length > 0) {
       console.log('💪 STRENGTHS:');
@@ -130,8 +188,11 @@ export class ViralQualityMetric extends Metric {
       score: finalScore,
       info: {
         isViralWorthy,
-        signalScore,
-        antiPatternPenalty,
+        passReason,
+        greatSignalCount: greatCount,
+        goodSignalCount: goodCount,
+        majorPenaltyCount: majorPenalties.length,
+        totalPenalty,
         breakdown: {
           signals: Object.fromEntries(
             Object.entries(results.signals).map(([k, v]: [string, any]) => [k, v.score])
@@ -139,6 +200,9 @@ export class ViralQualityMetric extends Metric {
           antiPatterns: Object.fromEntries(
             Object.entries(results.antiPatterns).map(([k, v]: [string, any]) => [k, v.score])
           ),
+          greatSignals: results.greatSignals,
+          goodSignals: results.goodSignals,
+          majorPenalties,
         },
         strengths: results.strengths,
         weaknesses: results.weaknesses,

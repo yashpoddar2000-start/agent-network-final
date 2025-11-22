@@ -9,8 +9,9 @@ import {
 /**
  * Shocking Number Contrast Eval
  * 
- * Checks if post has ABSURD number comparisons that stop scrolling
- * Examples: "$8.5M vs $500K", "23% vs 4.5%", "$550K vs $147K"
+ * Checks if post has shocking numbers that stop scrolling:
+ * - TYPE A: ABSURD contrasts ("$8.5M vs $500K", "23% vs 4.5%")
+ * - TYPE B: Single shocking numbers ("$1.5B revenue", "23,000 stores")
  */
 export class ShockingNumberContrastMetric extends Metric {
   private openai: OpenAI;
@@ -82,15 +83,29 @@ export class ShockingNumberContrastMetric extends Metric {
   }
 
   private buildPrompt(qualityExamples: any[], flopExamples: any[], postToEval: string): string {
-    let prompt = `You are evaluating if a LinkedIn post has SHOCKING NUMBER CONTRAST - the kind of absurd numerical gaps that make people stop scrolling.
+    let prompt = `You are evaluating if a LinkedIn post has SHOCKING NUMBERS - the kind that make people stop scrolling.
 
-WHAT IS SHOCKING NUMBER CONTRAST?
-- ABSURD comparisons: $8.5M vs $500K (17x gap)
-- Head-to-head revenue/performance gaps that seem impossible
-- Numbers so contrasting they trigger "wait, WHAT?" reaction
-- Must be SPECIFIC numbers, not conceptual
+WHAT ARE SHOCKING NUMBERS?
+Two types that work:
 
-POSITIVE EXAMPLES (Posts with shocking number contrast):
+TYPE A: HEAD-TO-HEAD CONTRAST
+- $8.5M vs $500K (17x gap)
+- 23% margin vs 4.5% margin
+- Revenue/performance gaps that seem impossible
+- Must be ABSURD gap (5x-20x+, not 2x)
+
+TYPE B: SINGLE SHOCKING NUMBER
+- $1.5 BILLION in revenue (unexpectedly massive)
+- 23,000 store locations (stops you in your tracks)
+- One number so big/unexpected it triggers "wait, WHAT?"
+- Not just "a big number" - must be SURPRISING in context
+
+Both must be:
+- SPECIFIC numbers (not "a lot" or "way more")
+- In the HOOK (first 2-3 lines ideally)
+- Reveal hidden business dynamics or unexpected scale
+
+POSITIVE EXAMPLES (Posts with shocking numbers):
 ───────────────────────────────────────────────
 
 `;
@@ -102,7 +117,7 @@ POSITIVE EXAMPLES (Posts with shocking number contrast):
       prompt += '\n---\n\n';
     });
 
-    prompt += `NEGATIVE EXAMPLES (Posts WITHOUT shocking number contrast):
+    prompt += `NEGATIVE EXAMPLES (Posts WITHOUT shocking numbers):
 ───────────────────────────────────────────────
 
 `;
@@ -123,22 +138,22 @@ ${postToEval}
 ═══════════════════════════════════════════════
 
 EVALUATION CRITERIA:
-1. Does it have SPECIFIC shocking numbers? ($X vs $Y)
-2. Is the gap ABSURD enough to stop scrolling? (not 2x, more like 5x-20x)
-3. Are numbers in the HOOK (first 2 lines)?
-4. Do numbers reveal hidden competitive dynamics?
+1. Does it have SPECIFIC shocking number(s)? (contrast OR single massive number)
+2. TYPE A: Is the gap ABSURD? (5x-20x+) OR TYPE B: Is single number surprisingly massive?
+3. Are numbers in the HOOK (first 2-3 lines)?
+4. Do numbers reveal hidden business dynamics or unexpected scale?
 
 SCORING GUIDE:
-- 1.0: Perfect shocking contrast ($8.5M vs $500K level)
-- 0.8-0.9: Good contrast but could be more shocking
-- 0.5-0.7: Has numbers but not shocking enough
+- 1.0: Perfect shocking numbers (contrast like $8.5M vs $500K OR single like $1.5B)
+- 0.8-0.9: Good shocking numbers but could be more dramatic
+- 0.5-0.7: Has numbers but not shocking enough (small gap or unsurprising number)
 - 0.3-0.4: Conceptual only, missing specific numbers
-- 0.0-0.2: No number contrast at all
+- 0.0-0.2: No shocking numbers at all
 
 Return JSON:
 {
   "score": 0.0-1.0,
-  "reason": "Brief explanation of score",
+  "reason": "Brief explanation of score (specify TYPE A or TYPE B if present)",
   "recommendations": ["Specific fix 1", "Specific fix 2"]
 }`;
 

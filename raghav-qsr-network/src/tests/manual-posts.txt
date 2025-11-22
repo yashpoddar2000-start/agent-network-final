@@ -1,0 +1,194 @@
+===================================
+MANUAL POST TEST - 3 NEW POSTS
+===================================
+
+Instructions:
+
+1. Replace the placeholder text below with your 3 actual LinkedIn posts
+2. Keep the POST 1:, POST 2:, POST 3: headers exactly as they are
+3. Paste your full post text after each header
+4. Run: npm run test-manual-posts
+
+===================================
+
+POST 1:
+
+"If you raise the effing hot dog, I will kill you. Figure it out."
+
+Costco founder Jim Sinegal to his CEO, 2013.
+
+$1.50 in 1984. $1.50 in 2024. Through 191.89% inflation.
+
+The hot dog costs $4.55 to make. They sell it for $1.50. Loss: $3.00 per unit.
+
+200 million sold annually. Total loss: $600 million.
+
+Costco FY2024 operating income: $7.4 billion. Membership fees: $4.8 billion.
+
+Membership fees = 65% of their operating profit.
+
+Merchandise? Sold at 10.9% gross margin. That barely covers overhead after rent, labor, utilities.
+
+Costco doesn't make money selling you stuff. The profit is in the $65-130 membership fee.
+
+This changes how you think about the hot dog.
+
+The real trade-off:
+
+The "$600M loss" includes every cost: factory, workers, electricity, rent.
+
+But Costco is paying for those things anyway. The factory makes other food. The workers are already there.
+
+The only new cost per hot dog? Ingredients. About $2.50.
+
+So raising the price isn't "stop losing $600M." It's "make an extra $0.49 per hot dog on ingredient costs."
+
+Raise to $1.99: $0.49 more × 200M units = $98M additional revenue.
+
+Sounds good. Until you run the member math.
+
+If just 0.5% of members don't renew because "Costco changed":
+
+137 million members × 0.5% = 685,000 people.
+
+Each member's lifetime value (fees + spending over 10 years): $750.
+
+685,000 × $750 = $514 million lost.
+
+$98M in hot dog revenue vs $514M in lifetime value.
+
+Even at 0.5% churn, the price increase destroys value. And the actual sensitivity is probably higher: the hot dog is Costco's most visible commitment to never changing.
+
+This is why 2008 mattered:
+
+Hebrew National, their supplier, raised prices. Threatened the $1.50.
+
+Costco's choice: raise the price or build their own factory.
+
+They built a factory. Not to "save money": to control the one variable protecting their entire value proposition. Strategic necessity, not efficiency.
+
+The hot dog isn't a customer acquisition tool. It's an internal constraint.
+
+Costco's model only works at brutally low margins (10.9% vs Walmart's 24%). If margins expand, members question the membership fee. Value perception breaks.
+
+The hot dog is the enforcement mechanism. It sets the ceiling for the entire business.
+
+===================================
+
+POST 2:
+Why won't In-N-Out expand to the East Coast?
+
+Fresh ingredients. Daily deliveries. No freezers.
+
+Distribution centers in California, Texas, Arizona, Colorado. 300-600 mile radius.
+
+Beyond that, the model breaks.
+
+But the real competitive advantage isn't freshness. It's labor economics.
+
+In-N-Out's labor costs: 33% of revenue.
+McDonald's: 23%.
+
+In-N-Out pays $20-22/hour starting wage. McDonald's pays $15/hour.
+
+In-N-Out: 20% EBITDA margin.
+McDonald's: 10% profit margin.
+
+Higher labor costs, better margins.
+
+Why:
+
+McDonald's: 100% turnover. Replaces 20-30 employees annually at $1,700-$4,100 each. $78,500 annual churn cost per store.
+
+In-N-Out: 91% recommend the job. They stay.
+
+Pay more. Keep employees. Make double the profit.
+
+But it only works with regional clustering.
+
+100% of In-N-Out managers promoted from within.
+
+Regional clustering enables:
+• In-N-Out University trains employees centrally
+• Managers transfer between stores without relocating
+• Career path from cashier to manager is visible
+• Lower turnover saves $100K+ per store annually
+• Those savings fund higher wages
+
+424 stores, company-owned.
+
+McDonald's: 13,000+ franchised locations.
+
+In-N-Out University doesn't scale to 13,000 franchises. Manager transfers don't work 1,000 miles apart.
+
+In-N-Out: $5.8M revenue, $1.16M profit per store.
+McDonald's: $4.0M revenue, $400K profit per store.
+
+3x the profit per location.
+
+424 stores × $1.16M = $492M profit.
+13,000 stores × $400K = $5.2B profit.
+
+In-N-Out's supply chain limits expansion. But that limitation created something McDonald's can't replicate: regional density that turns labor costs into competitive advantage.
+
+
+===================================
+
+POST 3:
+Egg prices tripled in 2024. McDonald's and Wendy's both lost 8.7% of breakfast traffic, but their sales moved in opposite directions:
+
+McDonald's: Q2 2024 breakfast same-store sales flat. Held prices with $1 Egg McMuffin promos.
+Wendy's: Q2 2024 breakfast same-store sales +6%. Raised prices 4%, introduced $3 combo.
+
+Why opposite strategies?
+
+McDonald's: 30% of total revenue from breakfast.
+Wendy's: 7.5% of total revenue from breakfast.
+
+When breakfast is 30% of revenue, you can't afford to bleed traffic. Absorb costs. Hold price. Keep customers.
+
+When breakfast is 7.5% of revenue, you can raise prices and accept traffic loss. The math says let some customers walk.
+
+This isn't about "pricing power." It's about how much of your business you can afford to risk.
+
+McDonald's franchisees absorbed the cost and took the margin hit. Corporate ran $1 promos. Franchisee group said it's "not sustainable without financial support."
+
+Wendy's raised prices 4%. Traffic dropped 8.7%, sales grew 6%. Revenue per transaction up 15%.
+
+The strategy isn't about brand strength. It's about what percentage of your revenue you can afford to lose.
+
+But here's the real story:
+
+Convenience store breakfast traffic: +9% in same period.
+Fast food breakfast traffic: +1%.
+
+48% of convenience store breakfast customers replaced a fast food visit.
+75% cited "value" as the reason.
+
+The egg shock didn't just test pricing power. It revealed who was actually competing with whom.
+
+Wendy's thought they were competing with McDonald's for breakfast customers.
+
+They were actually competing with convenience stores.
+
+Convenience stores don't have the same problem. Breakfast is a traffic driver for higher-margin items (coffee, energy drinks, snacks). They can price breakfast at cost to pull customers in, then capture margin on the rest of the basket.
+
+Fast food chains need breakfast to be profitable on its own. Convenience stores just need it to get people in the door.
+
+McDonald's held prices. Lost 8.7% of traffic anyway.
+Wendy's raised prices. Lost 8.7% of traffic anyway.
+Convenience stores gained 9% of traffic.
+
+When commodity costs spike, your strategy depends on daypart exposure.
+
+High exposure (30% of revenue): Absorb costs, hold price, protect traffic.
+Low exposure (7.5% of revenue): Raise prices, accept traffic loss, optimize margin.
+
+But neither strategy works if your competitor doesn't need breakfast to be profitable.
+
+Fast food chains fought over pricing strategy while convenience stores changed the game entirely.
+
+
+
+===================================
+

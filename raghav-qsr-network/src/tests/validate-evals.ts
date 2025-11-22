@@ -130,7 +130,7 @@ async function validateEvals() {
 
   const fs = require('fs');
   const path = require('path');
-  const outputPath = path.join(__dirname, '../tests/results/validation-results.json');
+  const outputPath = path.join(__dirname, 'results/validation-results.json');
   fs.writeFileSync(outputPath, JSON.stringify(summary, null, 2));
   console.log(`\n💾 Results saved to: tests/results/validation-results.json\n`);
 }

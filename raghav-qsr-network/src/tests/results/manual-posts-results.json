@@ -1,0 +1,219 @@
+{
+  "timestamp": "2025-11-22T17:51:33.732Z",
+  "testType": "manual_posts_test",
+  "postsCount": 3,
+  "summary": {
+    "viralCount": 2,
+    "excellentCount": 3,
+    "avgScore": 0.9666666666666667
+  },
+  "results": [
+    {
+      "postNumber": 2,
+      "postPreview": "Why won't In-N-Out expand to the East Coast?\n\nFresh ingredients. Daily deliveries. No freezers.\n\nDis...",
+      "score": 1,
+      "verdict": "🔥 EXCELLENT",
+      "isViralWorthy": false,
+      "greatSignals": [
+        {
+          "name": "shocking number contrast",
+          "score": 0.8
+        },
+        {
+          "name": "side by side comparison",
+          "score": 0.8
+        },
+        {
+          "name": "contrarian with proof",
+          "score": 0.9
+        },
+        {
+          "name": "detailed breakdown",
+          "score": 0.9
+        },
+        {
+          "name": "reveals hidden mechanism",
+          "score": 0.8
+        },
+        {
+          "name": "david vs goliath",
+          "score": 0.8
+        }
+      ],
+      "goodSignals": [],
+      "weakSignals": [
+        {
+          "name": "comeback story",
+          "score": 0.3
+        }
+      ],
+      "antiPatterns": [
+        {
+          "name": "cringy hook",
+          "penalty": 0.30000000000000004
+        }
+      ],
+      "strengths": [
+        "✓ shocking number contrast (0.80)",
+        "✓ side by side comparison (0.80)",
+        "✓ contrarian with proof (0.90)",
+        "✓ detailed breakdown (0.90)",
+        "✓ reveals hidden mechanism (0.80)",
+        "✓ david vs goliath (0.80)"
+      ],
+      "weaknesses": [
+        "✗ Weak comeback story (0.30)",
+        "🚨 MAJOR ISSUE: cringy hook (-0.30)"
+      ],
+      "recommendations": [
+        "Include a specific crisis or challenge In-N-Out faced that necessitated a strategic pivot.",
+        "Detail the specific actions taken by In-N-Out to address the crisis and how these actions led to a turnaround.",
+        "Provide quantified results showing improvement or recovery from the initial crisis.",
+        "Lead with a data-driven statement about In-N-Out's business strategy or market impact.",
+        "Provide a comparison with other chains that have expanded successfully to the East Coast."
+      ],
+      "allSignalScores": {
+        "shocking_number_contrast": 0.8,
+        "side_by_side_comparison": 0.8,
+        "contrarian_with_proof": 0.9,
+        "detailed_breakdown": 0.9,
+        "reveals_hidden_mechanism": 0.8,
+        "comeback_story": 0.3,
+        "david_vs_goliath": 0.8
+      }
+    },
+    {
+      "postNumber": 1,
+      "postPreview": "\"If you raise the effing hot dog, I will kill you. Figure it out.\"\n\nCostco founder Jim Sinegal to hi...",
+      "score": 0.95,
+      "verdict": "🔥 EXCELLENT",
+      "isViralWorthy": true,
+      "greatSignals": [
+        {
+          "name": "shocking number contrast",
+          "score": 1
+        },
+        {
+          "name": "contrarian with proof",
+          "score": 1
+        },
+        {
+          "name": "detailed breakdown",
+          "score": 1
+        },
+        {
+          "name": "reveals hidden mechanism",
+          "score": 0.9
+        }
+      ],
+      "goodSignals": [],
+      "weakSignals": [
+        {
+          "name": "side by side comparison",
+          "score": 0.3
+        },
+        {
+          "name": "comeback story",
+          "score": 0.5
+        },
+        {
+          "name": "david vs goliath",
+          "score": 0
+        }
+      ],
+      "antiPatterns": [],
+      "strengths": [
+        "✓ shocking number contrast (1.00)",
+        "✓ contrarian with proof (1.00)",
+        "✓ detailed breakdown (1.00)",
+        "✓ reveals hidden mechanism (0.90)"
+      ],
+      "weaknesses": [
+        "✗ Weak side by side comparison (0.30)",
+        "✗ Weak david vs goliath (0.00)"
+      ],
+      "recommendations": [
+        "Introduce a comparison with another retail company, such as Walmart or Sam's Club, to highlight how different pricing strategies impact membership models and customer perception.",
+        "Include a discussion on how other companies handle similar loss-leader products and the outcomes of those strategies to create a clearer winner/loser narrative.",
+        "Introduce a comparison between Costco and a much larger competitor in the retail space, showing how Costco's unique strategy gives it an advantage.",
+        "Highlight a smaller player in the retail or food service industry that uses a similar strategy to outperform a much larger competitor, creating a clear David vs Goliath narrative.",
+        "Maintain the use of direct quotes from industry leaders to add credibility and interest."
+      ],
+      "allSignalScores": {
+        "shocking_number_contrast": 1,
+        "side_by_side_comparison": 0.3,
+        "contrarian_with_proof": 1,
+        "detailed_breakdown": 1,
+        "reveals_hidden_mechanism": 0.9,
+        "comeback_story": 0.5,
+        "david_vs_goliath": 0
+      }
+    },
+    {
+      "postNumber": 3,
+      "postPreview": "Egg prices tripled in 2024. McDonald's and Wendy's both lost 8.7% of breakfast traffic, but their sa...",
+      "score": 0.95,
+      "verdict": "🔥 EXCELLENT",
+      "isViralWorthy": true,
+      "greatSignals": [
+        {
+          "name": "side by side comparison",
+          "score": 0.9
+        },
+        {
+          "name": "contrarian with proof",
+          "score": 0.9
+        },
+        {
+          "name": "detailed breakdown",
+          "score": 0.85
+        },
+        {
+          "name": "reveals hidden mechanism",
+          "score": 0.8
+        }
+      ],
+      "goodSignals": [],
+      "weakSignals": [
+        {
+          "name": "shocking number contrast",
+          "score": 0.5
+        },
+        {
+          "name": "comeback story",
+          "score": 0.4
+        },
+        {
+          "name": "david vs goliath",
+          "score": 0.5
+        }
+      ],
+      "antiPatterns": [],
+      "strengths": [
+        "✓ side by side comparison (0.90)",
+        "✓ contrarian with proof (0.90)",
+        "✓ detailed breakdown (0.85)",
+        "✓ reveals hidden mechanism (0.80)"
+      ],
+      "weaknesses": [
+        "✗ Weak comeback story (0.40)"
+      ],
+      "recommendations": [
+        "Include specific quantified results showing how McDonald's or Wendy's recovered or benefited from their strategy.",
+        "Provide a complete arc by detailing a positive outcome or triumph for either company, showing how they overcame the crisis.",
+        "Maintain the focus on data and insights to ensure the post remains authoritative and engaging.",
+        "Include more specific financial figures to enhance the depth, such as the exact cost implications for McDonald's franchisees or the margin impact on Wendy's.",
+        "Provide a deeper analysis of the convenience store strategy, potentially with data on how much additional revenue is generated from higher-margin items when breakfast traffic increases."
+      ],
+      "allSignalScores": {
+        "shocking_number_contrast": 0.5,
+        "side_by_side_comparison": 0.9,
+        "contrarian_with_proof": 0.9,
+        "detailed_breakdown": 0.85,
+        "reveals_hidden_mechanism": 0.8,
+        "comeback_story": 0.4,
+        "david_vs_goliath": 0.5
+      }
+    }
+  ]
+}

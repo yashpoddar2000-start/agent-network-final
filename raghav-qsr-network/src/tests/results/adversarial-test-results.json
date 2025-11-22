@@ -1,0 +1,458 @@
+{
+  "timestamp": "2025-11-22T16:54:40.173Z",
+  "testType": "adversarial_stress_test",
+  "sampleSize": 19,
+  "accuracy": 78.94736842105263,
+  "signalDetectionMetrics": {
+    "avgPrecision": 0.5018518518518519,
+    "avgRecall": 0.7222222222222222,
+    "avgF1": 0.5621693121693121
+  },
+  "difficultyBreakdown": {
+    "easy": {
+      "total": 3,
+      "passed": 3
+    },
+    "medium": {
+      "total": 4,
+      "passed": 2
+    },
+    "hard": {
+      "total": 2,
+      "passed": 1
+    },
+    "extreme": {
+      "total": 0,
+      "passed": 0
+    }
+  },
+  "results": [
+    {
+      "id": "P004",
+      "expectedCategory": "quality",
+      "score": 0,
+      "passed": false,
+      "isViralWorthy": false,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast"
+        ],
+        "detected": [],
+        "correctlyDetected": [],
+        "missed": [
+          "shocking_number_contrast"
+        ],
+        "falsePositives": [],
+        "precision": 0,
+        "recall": 0,
+        "f1Score": 0
+      },
+      "difficulty": "hard",
+      "issue": "Scored 0.00 (threshold 0.85). Detected 0/1 signals."
+    },
+    {
+      "id": "P014",
+      "expectedCategory": "quality",
+      "score": 0.75,
+      "passed": false,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "detected": [
+          "contrarian_with_proof",
+          "detailed_breakdown"
+        ],
+        "correctlyDetected": [
+          "detailed_breakdown"
+        ],
+        "missed": [
+          "shocking_number_contrast"
+        ],
+        "falsePositives": [
+          "contrarian_with_proof"
+        ],
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1Score": 0.5
+      },
+      "difficulty": "medium",
+      "issue": "Scored 0.75 (threshold 0.85). Detected 2/2 signals."
+    },
+    {
+      "id": "P035",
+      "expectedCategory": "quality",
+      "score": 0.75,
+      "passed": false,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "correctlyDetected": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "missed": [],
+        "falsePositives": [],
+        "precision": 1,
+        "recall": 1,
+        "f1Score": 1
+      },
+      "difficulty": "medium",
+      "issue": "Scored 0.75 (threshold 0.85). Detected 2/2 signals."
+    },
+    {
+      "id": "P007",
+      "expectedCategory": "quality",
+      "score": 0.95,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "contrarian_with_proof",
+          "reveals_hidden_mechanism"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "correctlyDetected": [
+          "contrarian_with_proof",
+          "reveals_hidden_mechanism"
+        ],
+        "missed": [],
+        "falsePositives": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "precision": 0.5,
+        "recall": 1,
+        "f1Score": 0.6666666666666666
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "P037",
+      "expectedCategory": "quality",
+      "score": 0.85,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "correctlyDetected": [
+          "shocking_number_contrast",
+          "detailed_breakdown"
+        ],
+        "missed": [],
+        "falsePositives": [],
+        "precision": 1,
+        "recall": 1,
+        "f1Score": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "P034",
+      "expectedCategory": "quality",
+      "score": 0.85,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "missing_curiosity_hook",
+          "missing_forensic_detail",
+          "zero_insight"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "correctlyDetected": [],
+        "missed": [
+          "missing_curiosity_hook",
+          "missing_forensic_detail",
+          "zero_insight"
+        ],
+        "falsePositives": [
+          "shocking_number_contrast",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "precision": 0,
+        "recall": 0,
+        "f1Score": 0
+      },
+      "difficulty": "easy",
+      "issue": "Low recall (0%) - missed missing_curiosity_hook, missing_forensic_detail, zero_insight"
+    },
+    {
+      "id": "P057",
+      "expectedCategory": "quality",
+      "score": 0.95,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "side_by_side_comparison",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "detected": [
+          "side_by_side_comparison",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "correctlyDetected": [
+          "side_by_side_comparison",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "missed": [],
+        "falsePositives": [
+          "contrarian_with_proof"
+        ],
+        "precision": 0.75,
+        "recall": 1,
+        "f1Score": 0.8571428571428571
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P001",
+      "expectedCategory": "quality",
+      "score": 0.95,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "side_by_side_comparison",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism",
+          "david_vs_goliath"
+        ],
+        "correctlyDetected": [
+          "shocking_number_contrast"
+        ],
+        "missed": [],
+        "falsePositives": [
+          "side_by_side_comparison",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism",
+          "david_vs_goliath"
+        ],
+        "precision": 0.16666666666666666,
+        "recall": 1,
+        "f1Score": 0.2857142857142857
+      },
+      "difficulty": "hard"
+    },
+    {
+      "id": "P053",
+      "expectedCategory": "quality",
+      "score": 0.95,
+      "passed": true,
+      "isViralWorthy": true,
+      "signalComparison": {
+        "annotated": [
+          "shocking_number_contrast",
+          "side_by_side_comparison",
+          "detailed_breakdown"
+        ],
+        "detected": [
+          "shocking_number_contrast",
+          "side_by_side_comparison",
+          "contrarian_with_proof",
+          "detailed_breakdown",
+          "reveals_hidden_mechanism"
+        ],
+        "correctlyDetected": [
+          "shocking_number_contrast",
+          "side_by_side_comparison",
+          "detailed_breakdown"
+        ],
+        "missed": [],
+        "falsePositives": [
+          "contrarian_with_proof",
+          "reveals_hidden_mechanism"
+        ],
+        "precision": 0.6,
+        "recall": 1,
+        "f1Score": 0.7499999999999999
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "P025",
+      "expectedCategory": "flop",
+      "score": 0.7000000000000001,
+      "passed": true,
+      "isViralWorthy": true,
+      "antiPatternsDetected": [
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P028",
+      "expectedCategory": "flop",
+      "score": 0.7000000000000001,
+      "passed": true,
+      "isViralWorthy": true,
+      "antiPatternsDetected": [
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P051",
+      "expectedCategory": "flop",
+      "score": 0.24999999999999994,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P026",
+      "expectedCategory": "flop",
+      "score": 0,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P029",
+      "expectedCategory": "flop",
+      "score": 0.14999999999999997,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "cringy_hook"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P020",
+      "expectedCategory": "flop",
+      "score": 0.85,
+      "passed": false,
+      "isViralWorthy": true,
+      "antiPatternsDetected": [],
+      "difficulty": "medium",
+      "issue": "FALSE POSITIVE: Scored 0.85 but should be < 0.85. Anti-patterns not caught."
+    },
+    {
+      "id": "P039",
+      "expectedCategory": "flop",
+      "score": 0,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "cringy_hook",
+        "broad_appeal",
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P041",
+      "expectedCategory": "flop",
+      "score": 0,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "cringy_hook",
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P022",
+      "expectedCategory": "flop",
+      "score": 0,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "cringy_hook",
+        "broad_appeal",
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "P033",
+      "expectedCategory": "flop",
+      "score": 0,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatternsDetected": [
+        "cringy_hook",
+        "broad_appeal",
+        "forensic_detail"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "failures": [
+    {
+      "id": "P004",
+      "category": "quality",
+      "difficulty": "hard",
+      "score": 0,
+      "issue": "Scored 0.00 (threshold 0.85). Detected 0/1 signals."
+    },
+    {
+      "id": "P014",
+      "category": "quality",
+      "difficulty": "medium",
+      "score": 0.75,
+      "issue": "Scored 0.75 (threshold 0.85). Detected 2/2 signals."
+    },
+    {
+      "id": "P035",
+      "category": "quality",
+      "difficulty": "medium",
+      "score": 0.75,
+      "issue": "Scored 0.75 (threshold 0.85). Detected 2/2 signals."
+    },
+    {
+      "id": "P020",
+      "category": "flop",
+      "difficulty": "medium",
+      "score": 0.85,
+      "issue": "FALSE POSITIVE: Scored 0.85 but should be < 0.85. Anti-patterns not caught."
+    }
+  ]
+}

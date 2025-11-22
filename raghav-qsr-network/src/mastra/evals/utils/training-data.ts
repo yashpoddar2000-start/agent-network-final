@@ -45,11 +45,16 @@ export function loadAllPosts(): Post[] {
 }
 
 /**
- * Get quality posts (hasViralElements: true)
+ * Get quality posts that actually went viral
+ * Filters for BOTH:
+ * - hasViralElements: true (manual quality assessment)
+ * - isViral: true (actual engagement performance)
+ * 
+ * This ensures we train on posts that have quality AND proven results
  */
 export function getQualityPosts(): Post[] {
   const posts = loadAllPosts();
-  return posts.filter(p => p.hasViralElements === true);
+  return posts.filter(p => p.hasViralElements === true && p.isViral === true);
 }
 
 /**
@@ -61,13 +66,50 @@ export function getFlopPosts(): Post[] {
 }
 
 /**
+ * Get posts with viral elements that didn't go viral (unlucky/bad timing)
+ * These have quality but didn't perform due to algorithm/timing
+ */
+export function getUnluckyPosts(): Post[] {
+  const posts = loadAllPosts();
+  return posts.filter(p => p.hasViralElements === true && p.isViral === false);
+}
+
+/**
  * Get quality posts with specific leverage signal
+ * 
+ * HYBRID APPROACH:
+ * 1. First tries to get proven winners (hasViralElements: true AND isViral: true)
+ * 2. If < 3 examples found, supplements with unlucky posts (quality but didn't go viral)
+ * 
+ * This ensures all signals have sufficient training examples while prioritizing
+ * posts that both had quality AND performed well.
  */
 export function getPostsBySignal(signal: string): Post[] {
+  const MIN_EXAMPLES = 3;
+  
+  // Start with proven winners only
   const qualityPosts = getQualityPosts();
-  return qualityPosts.filter(post => 
+  const provenPosts = qualityPosts.filter(post => 
     post.leverageSignals?.some(s => s.signal === signal)
   );
+  
+  // If we have enough proven examples, use those
+  if (provenPosts.length >= MIN_EXAMPLES) {
+    return provenPosts;
+  }
+  
+  // Otherwise, supplement with unlucky posts (quality but didn't go viral)
+  const unluckyPosts = getUnluckyPosts();
+  const unluckyWithSignal = unluckyPosts.filter(post =>
+    post.leverageSignals?.some(s => s.signal === signal)
+  );
+  
+  // Combine proven + unlucky, prioritizing proven
+  const combined = [...provenPosts, ...unluckyWithSignal];
+  
+  console.log(`[Training Data] Signal "${signal}": ${provenPosts.length} proven, ${unluckyWithSignal.length} unlucky (${combined.length} total)`);
+  
+  return combined;
 }
 
 /**

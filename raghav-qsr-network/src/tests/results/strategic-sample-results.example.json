@@ -1,0 +1,218 @@
+{
+  "timestamp": "2025-01-22T15:30:45.123Z",
+  "testType": "strategic_sample",
+  "sampleSize": 20,
+  "accuracy": 90,
+  "qualityAccuracy": 91.67,
+  "flopAccuracy": 87.5,
+  "diagnosis": "needs_tuning",
+  "results": [
+    {
+      "id": "P001",
+      "expectedCategory": "quality",
+      "score": 0.92,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "detailed_breakdown",
+        "reveals_hidden_mechanism"
+      ]
+    },
+    {
+      "id": "P052",
+      "expectedCategory": "quality",
+      "score": 0.89,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "side_by_side_comparison",
+        "detailed_breakdown"
+      ]
+    },
+    {
+      "id": "P053",
+      "expectedCategory": "quality",
+      "score": 0.91,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "side_by_side_comparison",
+        "contrarian_with_proof",
+        "detailed_breakdown"
+      ]
+    },
+    {
+      "id": "P054",
+      "expectedCategory": "quality",
+      "score": 0.88,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "contrarian_with_proof",
+        "detailed_breakdown"
+      ]
+    },
+    {
+      "id": "P058",
+      "expectedCategory": "quality",
+      "score": 0.87,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "detailed_breakdown"
+      ]
+    },
+    {
+      "id": "P037",
+      "expectedCategory": "quality",
+      "score": 0.86,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "reveals_hidden_mechanism"
+      ]
+    },
+    {
+      "id": "P035",
+      "expectedCategory": "quality",
+      "score": 0.84,
+      "passed": false,
+      "isViralWorthy": false,
+      "signals": [
+        "detailed_breakdown"
+      ]
+    },
+    {
+      "id": "P014",
+      "expectedCategory": "quality",
+      "score": 0.82,
+      "passed": false,
+      "isViralWorthy": false,
+      "signals": [
+        "comeback_story"
+      ]
+    },
+    {
+      "id": "P004",
+      "expectedCategory": "quality",
+      "score": 0.88,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast"
+      ]
+    },
+    {
+      "id": "P056",
+      "expectedCategory": "quality",
+      "score": 0.79,
+      "passed": false,
+      "isViralWorthy": false,
+      "signals": [
+        "side_by_side_comparison"
+      ]
+    },
+    {
+      "id": "P057",
+      "expectedCategory": "quality",
+      "score": 0.85,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "detailed_breakdown",
+        "reveals_hidden_mechanism"
+      ]
+    },
+    {
+      "id": "P034",
+      "expectedCategory": "quality",
+      "score": 0.86,
+      "passed": true,
+      "isViralWorthy": true,
+      "signals": [
+        "shocking_number_contrast",
+        "side_by_side_comparison"
+      ]
+    },
+    {
+      "id": "P029",
+      "expectedCategory": "flop",
+      "score": 0.45,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": [
+        "cringy_hook"
+      ]
+    },
+    {
+      "id": "P020",
+      "expectedCategory": "flop",
+      "score": 0.38,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": [
+        "forensic_detail"
+      ]
+    },
+    {
+      "id": "P039",
+      "expectedCategory": "flop",
+      "score": 0.42,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": []
+    },
+    {
+      "id": "P041",
+      "expectedCategory": "flop",
+      "score": 0.51,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": [
+        "broad_appeal"
+      ]
+    },
+    {
+      "id": "P025",
+      "expectedCategory": "flop",
+      "score": 0.72,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": [
+        "forensic_detail"
+      ]
+    },
+    {
+      "id": "P028",
+      "expectedCategory": "flop",
+      "score": 0.68,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": []
+    },
+    {
+      "id": "P051",
+      "expectedCategory": "flop",
+      "score": 0.87,
+      "passed": false,
+      "isViralWorthy": true,
+      "antiPatterns": []
+    },
+    {
+      "id": "P022",
+      "expectedCategory": "flop",
+      "score": 0.63,
+      "passed": true,
+      "isViralWorthy": false,
+      "antiPatterns": [
+        "broad_appeal"
+      ]
+    }
+  ]
+}
+
