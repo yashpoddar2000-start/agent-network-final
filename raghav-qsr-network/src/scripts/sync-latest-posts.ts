@@ -116,6 +116,7 @@ function transformApifyPost(apifyPost: ApifyPost, nextId: string): OurPost {
     textLength: text.length,
     lineCount: text.split('\n').length,
     isViral: isViral,
+    hasViralElements: null, // You'll manually assess quality
     url: apifyPost.url,
     urn: urnId,
     // Leave these EMPTY for manual analysis

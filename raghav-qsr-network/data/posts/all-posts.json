@@ -38,7 +38,8 @@
         "impact": "high",
         "note": "Exposes restaurant exclusivity deals that locked Uber out - insider strategic moves rarely discussed publicly. Also reveals pure-play vs diversified resource allocation ($20B rides + $12.5B grocery + food = focus dilution). This insider knowledge about competitive moats is similar to P015 (SEC lease traps) and P007 (franchise pricing strategy)."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P053",
@@ -79,7 +80,8 @@
         "impact": "high",
         "note": "Complete fixed cost forensics: exact rent calculations ($227K vs $100K), square footage (6,500 vs 2,500), occupancy as % of revenue (23% vs 4.5%), margin breakdown (24% vs 15%). Shows HOW format drives profitability. Same forensic depth as P019 (Din Tai Fung) and P002 (Chipotle)."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P054",
@@ -120,7 +122,8 @@
         "impact": "high",
         "note": "Complete financial forensics: unit economics ($862K profit, 26.7% margin, 25% ROIC, 3-year payback), franchise alternative calculation (8% royalty \u00d7 $3.2M = $256K), operating income comparison over 9 years. Shows HOW control creates value. Same depth as P019 (fixed cost math), P002 (Chipotle breakdown), P001 (control mechanisms)."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P055",
@@ -136,7 +139,7 @@
     "hasMedia": true,
     "textLength": 1804,
     "lineCount": 51,
-    "isViral": true,
+    "isViral": false,
     "url": "https://www.linkedin.com/posts/bypoddar_the-us-saved-starbucks-when-china-crashed-activity-7394408990828560384-p1Sh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGEiEOsBN3q34MWIb1JFaofFfELE62x9N8w",
     "urn": "7394408990828560384",
     "analysis": {
@@ -156,7 +159,8 @@
         "impact": "high",
         "note": "Exposes strategic mistake rarely discussed: bought China 100% at peak growth (+7%), immediately crashed. Shows margin compression mechanics ($362M per point). Reveals the exit: sold 60% to Boyu for $4B. Insider M&A failure details similar to P006 (Jack in the Box Del Taco disaster)."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P057",
@@ -197,7 +201,8 @@
         "impact": "high",
         "note": "Exposes why menu innovation works differently based on context: growth accelerator when you have momentum vs band-aid when declining. Reveals that chains add complexity when operational excellence is too hard to fix. Insider insight about strategic desperation vs tactical optimization."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P058",
@@ -233,7 +238,8 @@
         "impact": "high",
         "note": "Complete financial forensics: works backwards from $27.4M \u2192 daily requirement \u2192 parties \u2192 turns. Fixed cost math (7.3% vs 13.3% rent proportion). Fragility analysis (475 to 300 parties = margins compress to zero). MBA-level breakdown."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P060",
@@ -269,7 +275,8 @@
         "impact": "high",
         "note": "Exposes the fundamental trade-offs between franchising and company-owned models with insider specifics: 90% margin royalties, 55% manager turnover, 3-6 month rollout timelines. This level of operational detail about business model drawbacks is rarely discussed publicly."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P061",
@@ -305,7 +312,8 @@
         "impact": "high",
         "note": "Dissects exact cost structures for all 3 chains (labor %, occupancy %, food costs). Shows HOW 7.4-point margin gap = $215K/location difference. Makes readers understand unit economics at operator level."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P002",
@@ -339,7 +347,8 @@
         "impact": "high",
         "note": "Dissects $18 check down to exact cents ($5.36 food, $4.45 labor, $4.41 profit). Shows HOW the business actually works with real numbers and operational mechanics. Makes readers feel smart."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P007",
@@ -373,7 +382,8 @@
         "impact": "high",
         "note": "Exposes franchise buy-in, royalty revenue, and SEC filing details that are rarely discussed in social media or journalism. Super fresh insider content about how franchise economics actually work - this level of transparency and detail doesn't exist elsewhere."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P015",
@@ -407,7 +417,8 @@
         "impact": "high",
         "note": "Year-by-year progression 2019-2024 with specific numbers at each stage ($340M \u2192 $550M = 62% increase while closing stores). Chronicles the slow-motion disaster."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P009",
@@ -441,7 +452,8 @@
         "impact": "high",
         "note": "Names the expert (Mansour Samadpour), specific protocols (DNA testing every batch, blanching onions), timeline of recovery. Readers understand exactly HOW the comeback happened."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P034",
@@ -480,7 +492,8 @@
         "impact": "medium",
         "note": "Well-researched but boring - just inflation data without teaching fascinating principle. Compare to VIRAL posts that TEACH with ENERGY: P032 (fixed costs become WEAPONS), P025 (hidden lease TRAPS). This is 'McDonald's raised prices and lost customers' - obvious and dry. Academic analysis vs exciting insight. Kills ~10% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P006",
@@ -509,7 +522,8 @@
         "impact": "high",
         "note": "Exposes the pattern that 70-75% of restaurant M&A deals fail, especially when acquiring different cuisines. This insider knowledge about a repeating failure pattern (Red Lobster, TGI Fridays, Lemonade) makes readers feel smart and informed about strategic mistakes."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P037",
@@ -525,7 +539,7 @@
     "hasMedia": true,
     "textLength": 1383,
     "lineCount": 15,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Like they understand sophisticated consumer psychology and economics. Made them feel smart about why the contrarian behavior makes sense - people complaining about inflation but still spending MORE on dining out. The 'aha' moment: restaurants sell TIME ($36/hour opportunity cost), not just food. Teaches universal principle about value perception beyond price.",
       "whatTheyLearned": "Learned contrarian insight: Americans spending 53% of food budget on restaurants DESPITE inflation (41% \u2192 53% shift). Understood WHY through consumer psychology: time value economics. For dual-income families earning $75K+, the 53 minutes cooking = $36+ opportunity cost. Restaurants aren't food businesses, they're TIME businesses. Universal principle applicable to any convenience industry.",
@@ -543,7 +557,8 @@
         "impact": "high",
         "note": "Deep explanation of consumer psychology: time value economics. Shows WHY contrarian behavior is rational: 53 minutes cooking = $36+ opportunity cost for dual-income families. Teaches universal principle: restaurants sell TIME, not just food. Similar to P032 (fixed cost leverage) and P004 (diversity paradox) - forensic analysis revealing hidden dynamics."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P035",
@@ -559,7 +574,7 @@
     "hasMedia": true,
     "textLength": 1270,
     "lineCount": 19,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Like they understand sophisticated market saturation dynamics. Made them feel smart about recognizing when dominant brands hit growth ceilings vs endless expansion myths. The contrarian insight (McDonald's PEAKED, not still growing) challenges conventional wisdom. Taught them to think about market saturation mechanics - powerful framework applicable to any mature business.",
       "whatTheyLearned": "Learned McDonald's went from adding 1,130 stores (1995) to closing 244 (2021) - dramatic reversal showing peak growth. Understood WHY: 75% of Americans within 3 miles = saturation, new stores cannibalize existing ones. Got strategic insight: shift from expansion to optimization. Universal principle: 'When you've conquered a market, innovation becomes the only path.' Applies beyond restaurants to any mature business hitting saturation.",
@@ -577,7 +592,8 @@
         "impact": "high",
         "note": "Deep explanation of WHY growth peaked: saturation mechanics (75% within 3 miles), cannibalization dynamics, strategic shift from expansion to optimization. Teaches universal principle about mature market limits. Similar to P032 (fixed cost leverage breakdown) and P025 (lease trap mechanics) - forensic analysis that makes readers smarter."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P004",
@@ -606,7 +622,8 @@
         "impact": "high",
         "note": "7,200% growth is the hook that grabs attention and does all the talking. The number is so HUGE it immediately validates the contrarian claim and stops scrolling. This number IS the leverage signal."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P016",
@@ -622,7 +639,7 @@
     "hasMedia": true,
     "textLength": 1762,
     "lineCount": 25,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Informed about a major strategic shift in restaurant tech before it becomes obvious. Made them feel smart about platform economics and consolidation. Gave them a framework to understand DoorDash's next moves and who's about to get disrupted.",
       "whatTheyLearned": "Learned DoorDash's platform play: 590,000 restaurants (10x OpenTable's 60,000), zero fees vs OpenTable's $149-499/month, 81% of restaurants lack reservations = massive TAM. Understood the endgame: data moat (delivery + reservations + dining behavior = impossible to replicate). Saw the competitive threat map: OpenTable, Yelp, Toast, Square all under threat.",
@@ -640,7 +657,8 @@
         "impact": "high",
         "note": "Maps complete platform strategy: reservations + POS + data moat. Names every threatened competitor (OpenTable, Yelp, Toast, Square). Shows the full consolidation picture."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P005",
@@ -674,7 +692,8 @@
         "impact": "high",
         "note": "5-step explanation of HOW the turnaround happened (take-rate, DashPass, ads, efficiency, cost discipline) - readers understand the complete mechanics."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P014",
@@ -690,7 +709,7 @@
     "hasMedia": true,
     "textLength": 1623,
     "lineCount": 19,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Smart about consumer psychology - validated their gut feeling that fast food 'feels expensive now' with hard data. Made them understand why the psychology of pricing matters more than actual math. Gave them a framework to explain a trend everyone notices but couldn't articulate.",
       "whatTheyLearned": "Learned the shocking reversal: fast food 8.0 \u2192 5.2, casual dining 6.7 \u2192 7.7 in just 5 years. Understood the counterintuitive paradox: fast food raised prices less (22%) but lost perception, casual dining raised more (34%) but maintained value. Got the insight: 'Fast food broke the social contract of being cheap' - value propositions matter more than actual prices.",
@@ -708,7 +727,8 @@
         "impact": "high",
         "note": "Shows the paradox with specific data: 22% vs 34% price increases, McDonald's +2.5% vs Chili's +14.1% SSS. Explains WHY through 'social contract' framework."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P018",
@@ -724,7 +744,7 @@
     "hasMedia": true,
     "textLength": 1718,
     "lineCount": 19,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Smart about understanding why the 'obvious winner' (Starbucks with AI, tech, global scale) is actually losing. Made them question conventional wisdom that more technology and complexity equals better results. Validated that simplicity and focused execution beat sophistication. Gave them a framework to critique big company strategies.",
       "whatTheyLearned": "Learned the paradox: Starbucks (17,186 locations, AI, global partnerships, $3B cost cuts) is declining (-2%) while Dutch Bros (1,043 locations, 950 sq ft drive-thrus) is growing (+6.1%). Understood it's a 3-quarter consistent trend, not a fluke. Got the operational proof: Dutch Bros 90% retention, 71.6% loyalty, 31.1% margins vs Starbucks struggling with complexity. The killer insight: 'Sophisticated strategy is losing to the simple one.'",
@@ -742,7 +762,8 @@
         "impact": "high",
         "note": "Operational metrics comparison (90% retention, 71.6% loyalty, 31.1% margins), 3-quarter trend data, per-check analysis ($9.10 vs $9.60). Shows exactly WHY simple beats complex."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P010",
@@ -758,7 +779,7 @@
     "hasMedia": true,
     "textLength": 988,
     "lineCount": 22,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Engaged and curious - everyone sees matcha everywhere but never knew why it exploded. This answered a question they didn't even know they had. Made them feel informed about a trend happening right in front of them.",
       "whatTheyLearned": "Learned the specific mechanism behind matcha's rise: health benefits (L-theanine, antioxidants) + Instagram aesthetics (green vs brown). Understood why an established player (drip coffee) is getting disrupted by a newcomer.",
@@ -776,7 +797,8 @@
         "impact": "high",
         "note": "Explains the exact mechanism (health benefits + social media aesthetics) behind why matcha is winning - readers understand the complete picture."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P038",
@@ -792,7 +814,7 @@
     "hasMedia": true,
     "textLength": 1216,
     "lineCount": 20,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Like they understand competitive dynamics and operational economics in fast food. Made them feel smart about why Chick-fil-A dominates WITHOUT AI (2 min, 93% accuracy) while Taco Bell needs $1B AI investment. The 'aha' moment: operational excellence beats expensive tech. Contrarian insight that challenges 'AI solves everything' narrative.",
       "whatTheyLearned": "Learned shocking contrast: Taco Bell 275% SLOWER than Chick-fil-A (7.5 min vs 2 min), 2x worse accuracy (15.5% vs 7% errors). Understood competitive landscape: everyone investing in AI (McDonald's 43K locations, Wendy's scaling). Key insight: Chick-fil-A already peaked at operational excellence without AI - you can't AI your way out of bad operations. Universal principle: fix fundamentals before adding tech.",
@@ -810,7 +832,8 @@
         "impact": "high",
         "note": "Deep competitive analysis: Chick-fil-A peaked without AI, Taco Bell desperate catch-up, industry-wide AI arms race detailed (McDonald's 43K locations, Wendy's scaling). Teaches universal principle: operational excellence beats expensive tech. Similar to P071 (time value economics), P032 (fixed cost leverage) - forensic analysis revealing hidden business dynamics."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P017",
@@ -826,7 +849,7 @@
     "hasMedia": true,
     "textLength": 1131,
     "lineCount": 24,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Informed about a stealth trend that happened while everyone was distracted by chicken sandwiches. Made them feel smart for spotting what others missed - the real opportunity was smash burgers, not the headline-grabbing chicken wars. Gave them the 'I see trends before they're obvious' feeling.",
       "whatTheyLearned": "Learned the contrarian insight: while chicken sandwiches dominated headlines, smash burgers quietly grew 10x. Understood WHY it works for operators: higher margins, fast cooking, low complexity, social media perfect. Got data validation: Google searches 10x, Yelp doubled, overtook chicken burger searches by 2024. Saw winners: Smashburger $338M revenue, Jack in the Box launching versions.",
@@ -844,7 +867,8 @@
         "impact": "high",
         "note": "Operator economics (higher margins, fast cooking, social media perfect), data sources (Google, Yelp trends), winner examples (Smashburger $338M, Jack in the Box). Complete picture of WHY and WHO."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P013",
@@ -860,7 +884,7 @@
     "hasMedia": true,
     "textLength": 942,
     "lineCount": 18,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Informed and skeptical - made readers feel smart about spotting the gap between hype and execution reality. Gave them a contrarian, data-driven take on a hot growth story. Made them question if Cava can deliver on its valuation promise.",
       "whatTheyLearned": "Learned the specific execution gap: Cava valued at $35M/store vs Chipotle's $20M/store, but needs to open 84 stores/year (only did 58 in 2024) - that's a 40% pace increase. Understood the difference between valuation expectations and current execution capability. Got the math on why the valuation is aggressive.",
@@ -878,7 +902,8 @@
         "impact": "high",
         "note": "Calculates the execution gap: 84 stores/year needed vs 58 opened = 40% pace increase required. Shows the math on why the valuation demands seem unrealistic."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P020",
@@ -894,7 +919,7 @@
     "hasMedia": true,
     "textLength": 1774,
     "lineCount": 37,
-    "isViral": true,
+    "isViral": false,
     "analysis": {
       "howItMadeReadersFeel": "Mildly interested but not impressed - these are obvious best practices everyone in the restaurant industry already knows. Didn't make them feel like insiders or give them sophisticated knowledge. No 'aha' moment because everything is surface-level.",
       "whatTheyLearned": "Surface-level WHAT: Chipotle charges 20-30% more, owns stores directly, has 35.4% digital sales. But completely MISSING the WHY and HOW - no mechanism explanation for how premium pricing actually works, no forensic detail on unit economics, no throughput breakdown showing operational superiority.",
@@ -912,7 +937,8 @@
         "impact": "high",
         "note": "Everything is public/obvious knowledge (digital sales %, revenue growth stats). No SEC filings, no unit-level P&L breakdown, no counterintuitive reveals about franchise economics. Compare to P025 (SEC lease trap details) or P012 (franchise buy-in pricing strategy). This gap kills ~30% of engagement - doesn't make readers feel like insiders with hidden knowledge."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P026",
@@ -946,7 +972,8 @@
         "impact": "high",
         "note": "Trend forecasting about what MIGHT happen (future tense), not proven results NOW. Gen Z still drinks 73%, $3.13B is low because they're young/smaller cohort. Compare to VIRAL posts showing current proven dynamics: P001 ($8.5M happening NOW), P032 ($27.4M happening NOW). Speculation vs concrete results. Kills ~40% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P030",
@@ -985,7 +1012,8 @@
         "impact": "medium",
         "note": "Surface-level margin math ($1.61 cost, $10.49 price) without deeper strategic insight. Why does Red Lobster win with this vs competitors? What's the unit-level impact? Compare to VIRAL posts with forensic breakdowns: P032 ($27.4M \u2192 475 parties \u2192 fixed cost leverage). Lists facts without revealing mechanism. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P044",
@@ -1014,7 +1042,8 @@
         "impact": "high",
         "note": "Just reports WHAT happened (product launch timeline, R&D process, marketing tactics) without explaining WHY it works from business perspective. Doesn't teach co-branding economics, margin impact, or replicable principles. Compare to VIRAL posts that TEACH: P032 (fixed cost mechanics), P012 (pricing power dynamics), P025 (lease economics). This is product journalism, not business analysis. Kills ~80% of engagement potential."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P039",
@@ -1043,7 +1072,8 @@
         "impact": "high",
         "note": "Pure news reporting - announces Chipotle drone delivery and lists Zipline timeline without business analysis. Doesn't explain WHY it matters, HOW economics work, WHAT competitive dynamics are. Compare to VIRAL posts that TEACH principles: P032 (fixed cost leverage), P071 (time value economics), P072 (operations beat tech). This is 'here's what's happening' not 'here's how business works.' Kills ~80% of engagement potential."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P021",
@@ -1077,7 +1107,8 @@
         "impact": "high",
         "note": "'You need capital...' is advice/educational, not curiosity-driven. Compare to VIRAL hooks: '$8.5M vs $500K' (P001), '$27.4M per restaurant' (P032) create MASSIVE curiosity about HOW. This hook doesn't make you want to keep reading. Kills ~40% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P048",
@@ -1111,7 +1142,8 @@
         "impact": "high",
         "note": "Generic company success story + timeline without business mechanics. Ends with Superorder sales pitch ('We're building Superorder for the scrappy, resilient businesses like Golden Chick') + client name-drops. Doesn't explain HOW regional model works economically, WHY marinating creates advantage. Compare to VIRAL posts: P012 (franchise economics), P032 (fixed costs). Promotional client spotlight, not analysis. Kills ~30% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P012",
@@ -1145,7 +1177,8 @@
         "impact": "high",
         "note": "Deep margin analysis (28% vs 18-22%, calculates $1.28 difference, 29% labor reduction) - reads like a real operator dissecting unit economics."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P046",
@@ -1179,7 +1212,8 @@
         "impact": "high",
         "note": "Just company timeline (founded 1952, franchised 1988) + promotional content ('super excited to have them on board' + client name-drops). Doesn't explain WHY spam/rice model works, HOW low royalties sustain, business mechanics. Compare to VIRAL posts that TEACH: P012 (franchise economics), P032 (fixed costs). This is promotional company history, not business analysis. Kills ~30% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P032",
@@ -1218,7 +1252,8 @@
         "impact": "medium",
         "note": "'\ud83d\udea8\ud83d\udea8\ud83d\udea8 CAVA now has their very own labubus rolling out TODAY!!' - desperate emoji spam and fake urgency signals low-quality content. Compare to VIRAL hooks that confidently present data: '$8.5M vs $500K', '$27.4M per restaurant'. Screaming with emojis vs confident analysis. Kills ~10% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P040",
@@ -1252,7 +1287,8 @@
         "impact": "medium",
         "note": "Lists WHAT McDonald's does (app discounts, price segmentation) without deep forensic analysis: What's customer lifetime value math? Margin impact? Retention data? Compare to VIRAL posts with forensic breakdowns: P032 ($27.4M \u2192 475 parties \u2192 fixed cost math), P025 (SEC lease mechanics). Surface-level observation vs deep dive. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P023",
@@ -1286,7 +1322,8 @@
         "impact": "medium",
         "note": "Just lists strategies surface-level ('human connection', 'flavor-forward', 'wholesale-first') without explaining HOW or showing unit economics. Compare to P032 ($27.4M \u2192 475 parties breakdown) or P001 (exact control mechanisms). Directory-style content without depth. Kills additional ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P050",
@@ -1320,7 +1357,8 @@
         "impact": "medium",
         "note": "Claims 'consumer behavior changing' but provides no mechanism - what psychological shift? How do unit economics differ? Why does 'authenticity' create pricing power? Compare to VIRAL posts with deep breakdowns: P032 (fixed cost math), P012 (pricing power mechanics). Just asserts trends without explaining HOW business works. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P045",
@@ -1354,7 +1392,8 @@
         "impact": "high",
         "note": "Just lists meal bundle prices (Habit $35, McDonald's $5, Wendy's $7) without explaining strategy, economics, or WHY bundling works. No margin analysis, no competitive dynamics, no strategic insight. Compare to VIRAL posts that TEACH: P012 (pricing power mechanics), P032 (fixed cost leverage). This reports WHAT chains charge, not HOW pricing strategy works. Kills ~40% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P028",
@@ -1393,7 +1432,8 @@
         "impact": "medium",
         "note": "'Real-time experiment' is decent but the insight is obvious: 'higher wages = higher prices = lower sales' - everyone expects that. Compare to VIRAL hooks revealing COUNTERINTUITIVE outcomes: 'raised prices, grew FASTER' (P012), 'MORE menu items = MORE revenue' (P004). Missing the unexpected reveal. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P051",
@@ -1427,7 +1467,8 @@
         "impact": "high",
         "note": "Hook is conceptual ('assembly lines vs cooking') but lacks ABSURD NUMBER to stop scrolling. Should open with '$12B Cava vs $1.2M local restaurant' or margin comparison. Compare to VIRAL hooks: '$8.5M vs $500K' (P001), '$27.4M per restaurant' (P032), '275% slower' (P072). Has insight but missing jaw-dropping data hook. Kills ~40% of viral potential."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P024",
@@ -1466,7 +1507,8 @@
         "impact": "medium",
         "note": "Even if you knew 7 Brew, still missing HOW (4-6x faster mechanism, 163% from what scale, unit economics). Compare to P032 which showed $27.4M \u2192 475 parties math. Kills additional ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P025",
@@ -1500,7 +1542,8 @@
         "impact": "high",
         "note": "Says WHAT Chili's did but not the deeper WHY or mechanism. How does $10 deal economics actually work? What's the unit-level P&L impact? Compare to P032 ($27.4M \u2192 $75K/day \u2192 475 parties breakdown) or P001 (exact control mechanisms). Missing the forensic depth that makes VIRAL posts feel like insider analysis. Kills ~30% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P047",
@@ -1534,7 +1577,8 @@
         "impact": "high",
         "note": "Just lists obvious industry trends (QSR down, fast casual up, coffee up) without explaining WHY these shifts happen or business mechanics. Compare to VIRAL posts that TEACH: P071 (WHY spending increases = time value economics), P072 (WHY Chick-fil-A wins = operations beat AI). This reports WHAT without HOW/WHY. Industry newsletter summary, not analysis. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P031",
@@ -1573,7 +1617,8 @@
         "impact": "medium",
         "note": "Claims 'I studied 500+' but shows no analysis, no data, no proof. Just generic lists (check temps, respond to reviews). Compare to VIRAL posts with actual breakdowns: P032 ($27.4M \u2192 475 parties math), P030 (Google Trends data). Assertion without evidence. Kills ~10% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P029",
@@ -1612,7 +1657,8 @@
         "impact": "medium",
         "note": "Claims 'I analyzed thousands of reviews' but shows no data breakdown - what percentage? Which platforms? Which chains? Compare to VIRAL posts with forensic breakdowns: P032 ($27.4M \u2192 475 parties math), P001 (exact control mechanisms). Just assertion without proof. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P011",
@@ -1646,7 +1692,8 @@
         "impact": "high",
         "note": "3-step strategy with specific numbers (232 hubs, 6,700 access points, revenue 3x) shows exactly how the comeback happened operationally."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P001",
@@ -1675,7 +1722,8 @@
         "impact": "high",
         "note": "$8.5M vs $500K = 17x gap. This hook is everything - immediately stops scrolling, shows dominance, and creates irresistible curiosity about the mechanism behind the difference."
       }
-    ]
+    ],
+    "hasViralElements": true
   },
   {
     "id": "P049",
@@ -1704,7 +1752,8 @@
         "impact": "high",
         "note": "Just reports WHAT Starbucks launched (Strato Frappuccino) with surface-level marketing observations ('layers look incredible', 'designed for Instagram'). Doesn't explain WHY menu innovation works strategically, HOW it affects unit economics, WHAT the business mechanics are. Compare to VIRAL posts that TEACH: P071 (consumer psychology), P032 (fixed cost leverage), P012 (pricing power). This is product news, not business analysis. Kills ~80% of engagement potential."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P042",
@@ -1738,7 +1787,8 @@
         "impact": "high",
         "note": "No business analysis - just reports Waffle House Index exists (disaster metric) without economics, competitive strategy, or actionable insight. Philosophical musing ('restaurants as gathering points') not business forensics. Compare to VIRAL posts that TEACH: P025 (lease mechanics), P012 (pricing power), P020 (margin analysis). This is motivational trivia, not business breakdown. Kills remaining ~10% engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P036",
@@ -1777,7 +1827,8 @@
         "impact": "medium",
         "note": "'Most restaurants are still built like it's 2005...But they're missing an enormous change' - manufactured suspense to set up sales pitch. Compare to VIRAL hooks presenting data confidently: '1,130 additions \u2192 244 closures' (P067), '$27.4M per restaurant' (P032). This teases to sell, not to teach. Kills ~10% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P041",
@@ -1811,7 +1862,8 @@
         "impact": "medium",
         "note": "Claims 'I've analyzed thousands of reviews' but shows no data breakdown - which chains? What sample size? Causation vs correlation? Just generic advice ('respond to everyone'). Compare to VIRAL posts with forensic depth: P032 ($27.4M \u2192 475 parties math), P025 (SEC lease mechanics). Surface-level claims vs deep analysis. Kills ~20% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P022",
@@ -1845,7 +1897,8 @@
         "impact": "high",
         "note": "No shocking numbers, no mechanisms, no forensic detail - just inspirational observations ('still make payroll', 'still open at 7am'). VIRAL hooks create curiosity ('$8.5M vs $500K', '$27.4M per restaurant'). This is emotional fluff + Superorder pitch. Kills ~40% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P033",
@@ -1884,7 +1937,8 @@
         "impact": "medium",
         "note": "Generic advice ('partner with transparent vendors', 'implement systems') without teaching business mechanics or showing WHO solved this problem. No forensic breakdown, no strategic insight. Just sales pitch masquerading as advice. Compare to VIRAL posts that TEACH: P032 (how fixed costs work), P025 (SEC lease trap mechanics). Kills ~10% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P027",
@@ -1918,7 +1972,8 @@
         "impact": "high",
         "note": "No specific brand names - 'a restaurant exec' and '30+ restaurants' is anonymous/vague. Compare to VIRAL posts naming winners/losers: Wingstop (P012), Din Tai Fung (P032), Chick-fil-A (P001). Can't verify or reference specific examples. '37% better satisfaction' lacks revenue impact. Kills ~30% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   },
   {
     "id": "P043",
@@ -1952,6 +2007,7 @@
         "impact": "high",
         "note": "Ends with blatant Superorder sales pitch ('Superorder helps restaurants turn ratings into revenue. Check out the link in my profile') - promotional content disguised as insight. Not teaching business mechanics, selling product. Compare to VIRAL posts that TEACH without selling: P032, P025, P012. Sales pitch masquerading as content. Kills ~30% of engagement."
       }
-    ]
+    ],
+    "hasViralElements": false
   }
 ]
