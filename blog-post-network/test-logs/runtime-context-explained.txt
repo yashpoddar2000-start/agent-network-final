@@ -1,0 +1,197 @@
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+🎓 UNDERSTANDING: RuntimeContext vs Data Flow
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📦 RUNTIME CONTEXT - INITIAL STATE:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+Type: object
+Constructor: RuntimeContext
+Keys: ["registry"]
+Is it empty? YES (just registry key)
+Full object: {}
+
+💡 KEY INSIGHT:
+RuntimeContext starts mostly EMPTY!
+It's just a container you CAN use, not one that HAS data by default.
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+STEP 1: Research
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📥 Step 1 INPUT (from user):
+{
+  "topic": "TypeScript",
+  "depth": "moderate",
+  "numFindings": 3
+}
+
+📦 RuntimeContext BEFORE Step 1:
+{}
+(Empty - no data yet)
+
+📤 Step 1 OUTPUT (returned):
+{
+  "topic": "TypeScript",
+  "researchData": {
+    "findings": [
+      {
+        "point": "Research finding #1 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 1",
+        "relevance": "high",
+        "category": "trends"
+      },
+      {
+        "point": "Research finding #2 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 2",
+        "relevance": "high",
+        "category": "examples"
+      },
+      {
+        "point": "Research finding #3 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 3",
+        "relevance": "high",
+        "category": "statistics"
+      }
+    ],
+    "keyInsights": [
+      "TypeScript is an important topic in modern technology",
+      "Recent trends show growing interest in TypeScript",
+      "Industry experts recommend focusing on TypeScript"
+    ]
+  }
+}
+
+📦 RuntimeContext AFTER Step 1:
+{}
+(Still mostly empty - step didn't modify it)
+
+💡 KEY INSIGHT:
+Step 1 OUTPUT is stored in step1Output variable, NOT in runtimeContext!
+RuntimeContext is passed TO the tool, but doesn't store the result.
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+STEP 2: Writing
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📥 Step 2 INPUT (HOW does it get data from Step 1?):
+────────────────────────────────────────────────────────────────────────────────────────────────────
+WRONG WAY (not how it works):
+  ❌ Read from runtimeContext
+  ❌ Global variable
+  ❌ Database lookup
+
+CORRECT WAY (how it actually works):
+  ✅ Step 1's return value is PASSED as inputData parameter
+  ✅ Workflow engine handles this automatically with .then()
+  ✅ No magic, just function parameters!
+
+Step 2 receives inputData:
+{
+  "topic": "TypeScript",
+  "researchData": {
+    "findings": [
+      {
+        "point": "Research finding #1 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 1",
+        "relevance": "high",
+        "category": "trends"
+      },
+      {
+        "point": "Research finding #2 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 2",
+        "relevance": "high",
+        "category": "examples"
+      },
+      {
+        "point": "Research finding #3 about TypeScript: This is important because it demonstrates key aspects of the topic.",
+        "source": "Research Source 3",
+        "relevance": "high",
+        "category": "statistics"
+      }
+    ],
+    "keyInsights": [
+      "TypeScript is an important topic in modern technology",
+      "Recent trends show growing interest in TypeScript",
+      "Industry experts recommend focusing on TypeScript"
+    ]
+  }
+}
+
+^ This is EXACTLY Step 1's output!
+  .then() automatically passed it!
+
+
+📦 RuntimeContext during Step 2:
+{}
+(Still the same - hasn't changed)
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+🎯 THE BIG DIFFERENCE
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ HOW DATA FLOWS BETWEEN STEPS (The Pipeline)                     │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  Step 1: execute({ inputData })                                 │
+│    ↓                                                             │
+│  return { topic, researchData }  ← RETURN VALUE                 │
+│    ↓                                                             │
+│  [.then() magic happens]                                        │
+│    ↓                                                             │
+│  Step 2: execute({ inputData })                                 │
+│           ↑                                                      │
+│           inputData = Step 1's return value!                    │
+│    ↓                                                             │
+│  return { topic, draftContent }  ← RETURN VALUE                 │
+│    ↓                                                             │
+│  [.then() magic happens]                                        │
+│    ↓                                                             │
+│  Step 3: execute({ inputData })                                 │
+│           ↑                                                      │
+│           inputData = Step 2's return value!                    │
+│                                                                  │
+│  This is FUNCTION COMPOSITION - simple CS concept!              │
+│  result1 = step1(input)                                         │
+│  result2 = step2(result1)  ← Step 2 gets Step 1's result       │
+│  result3 = step3(result2)  ← Step 3 gets Step 2's result       │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ WHAT RUNTIME CONTEXT IS FOR                                      │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  RuntimeContext = Shared container (like global state)          │
+│                                                                  │
+│  Used for:                                                       │
+│  ✅ Passing to tools/agents (they might need it)                │
+│  ✅ Dependency injection (services, config)                     │
+│  ✅ Shared metadata (user ID, session info)                     │
+│  ✅ Custom context data (if you add it)                         │
+│                                                                  │
+│  NOT used for:                                                   │
+│  ❌ Passing data between steps (use return values!)             │
+│  ❌ Pipeline data transformation                                │
+│                                                                  │
+│  Example use case:                                               │
+│  runtimeContext.set('userId', 'raghav')                         │
+│  → All steps can access userId                                  │
+│  → But step data still flows through returns                    │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+  
+
+🎓 SUMMARY:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+1. Data flows through RETURN VALUES (inputData parameter)
+2. RuntimeContext is a SHARED CONTAINER (global-ish state)
+3. .then() automatically passes return → next inputData
+4. RuntimeContext travels alongside but doesn't hold step data
+5. Think: Pipeline data vs Backpack that follows the pipeline
+════════════════════════════════════════════════════════════════════════════════════════════════════
+✅ NOW YOU UNDERSTAND THE DIFFERENCE!

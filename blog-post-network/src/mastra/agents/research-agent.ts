@@ -2,6 +2,7 @@ import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
 import { researchTool } from '../tools/research-tool';
 import { createAgentMemory } from '../memory-config';
+import { researchEvals } from '../evals/research-evals';
 
 /**
  * Research Agent
@@ -64,6 +65,12 @@ Return your research in a structured JSON format with:
   // Tools this agent can call
   tools: {
     researchTool,
+  },
+  
+  // Evaluation metrics
+  evals: {
+    completeness: researchEvals.completeness,
+    relevance: researchEvals.relevance,
   },
 });
 

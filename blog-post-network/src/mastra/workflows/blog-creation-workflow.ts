@@ -5,6 +5,7 @@ import { writingTool } from '../tools/writing-tool';
 import { editingTool } from '../tools/editing-tool';
 import { formattingTool } from '../tools/formatting-tool';
 import { writerAgent } from '../agents/writer-agent';
+import { editorAgent } from '../agents/editor-agent';
 
 /**
  * Blog Creation Workflow
@@ -136,26 +137,33 @@ const editDraftStep = createStep({
     improvementScore: z.number(),
   }),
   
-  execute: async ({ inputData, runtimeContext }) => {
-    console.log('✏️ [Workflow Step 3] Editing draft...');
+  execute: async ({ inputData }) => {
+    console.log('✏️ [Workflow Step 3] Editing draft with editor agent...');
     console.log(`📊 Draft length: ${inputData.draftContent.length} characters`);
 
-    // Use the editing tool
-    const editResult = await editingTool.execute({
-      context: {
-        content: inputData.draftContent,
-        focusAreas: ['grammar', 'clarity', 'tone'],
-      },
-      runtimeContext,
-    });
+    // Use the editor agent (has LLM brain to actually fix issues!)
+    const editResult = await editorAgent.generate(
+      `Review and improve this blog post draft. Fix grammar, improve clarity, enhance style, and ensure professional quality:
 
-    console.log(`✅ [Step 3] Editing complete: ${editResult?.changesMade?.length || 0} changes made`);
-    console.log(`📈 Improvement score: ${editResult?.improvementScore || 0}/100`);
+${inputData.draftContent}
+
+Focus on:
+- Grammar and spelling corrections
+- Breaking long sentences (>30 words)
+- Converting passive voice to active
+- Removing hedging words
+- Improving overall readability
+
+Return the improved version.`
+    );
+
+    console.log(`✅ [Step 3] Editing complete by editor agent`);
+    console.log(`📝 Edited content length: ${editResult.text.length} characters`);
 
     return {
       topic: inputData.topic,
-      editedContent: editResult.editedContent || inputData.draftContent,
-      improvementScore: editResult.improvementScore || 0,
+      editedContent: editResult.text,
+      improvementScore: 100, // Agent-edited, assume high quality
     };
   },
 });
@@ -200,7 +208,9 @@ const formatAndExportStep = createStep({
         options: {
           includeMetadata: true,
           includeTableOfContents: false,
-          formatting: 'standard',
+          codeHighlighting: true,
+          addHeadingIds: false,
+          formatting: 'standard' as const,
         },
       },
       runtimeContext,

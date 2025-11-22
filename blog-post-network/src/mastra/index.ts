@@ -99,6 +99,7 @@ export {
 // Workflow exported (Phase 4) ✅
 export { blogCreationWorkflow, createBlogPost } from './workflows/blog-creation-workflow';
 
-// Evals will be exported here (Phase 6)
-// export * from './evals';
+// Evals exported (Phase 6) ✅
+export * from './evals';
+export { writingQualityScorer } from './scorers/writing-quality-scorer';
 

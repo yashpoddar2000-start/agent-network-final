@@ -1,0 +1,33 @@
+{
+  "name": "raghav-qsr-network",
+  "version": "1.0.0",
+  "description": "Production agent network for Raghav's viral QSR content generation",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mastra",
+    "agent-network",
+    "qsr",
+    "content-generation"
+  ],
+  "author": "Yash Poddar",
+  "license": "MIT",
+  "dependencies": {
+    "@mastra/core": "latest",
+    "@mastra/memory": "latest",
+    "@mastra/evals": "latest",
+    "openai": "^4.0.0",
+    "zod": "^3.22.4",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
+

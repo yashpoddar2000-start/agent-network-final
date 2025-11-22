@@ -2,6 +2,9 @@ import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
 import { writingTool } from '../tools/writing-tool';
 import { createAgentMemory } from '../memory-config';
+import { contentEvals } from '../evals/content-evals';
+import { writingEvals } from '../evals/writing-evals';
+import { writingQualityScorer } from '../scorers/writing-quality-scorer';
 
 /**
  * Writer Agent
@@ -78,6 +81,15 @@ Return well-structured blog post content in markdown format with:
   
   tools: {
     writingTool,
+  },
+  
+  // Evaluation metrics
+  evals: {
+    structure: contentEvals.structure,
+    seo: contentEvals.seo,
+    quality: writingEvals.quality,
+    // Scorer (advanced LLM-based evaluation)
+    qualityScorer: writingQualityScorer,
   },
 });
 
