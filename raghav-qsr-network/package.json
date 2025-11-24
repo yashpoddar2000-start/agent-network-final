@@ -26,7 +26,8 @@
     "test:exa-raw": "tsx src/insight-network/tools/test-exa-raw-response.ts",
     "test:deep-research-raw": "tsx src/insight-network/tools/test-exa-deep-research-raw.ts",
     "test:deep-research": "tsx src/insight-network/tools/test-deep-research-integration.ts",
-    "test:single-prompt": "tsx src/insight-network/tools/test-single-prompt.ts"
+    "test:single-prompt": "tsx src/insight-network/tools/test-single-prompt.ts",
+    "test:insight-network": "tsx src/insight-network/test-insight-network.ts"
   },
   "keywords": [
     "mastra",
@@ -37,11 +38,11 @@
   "author": "Yash Poddar",
   "license": "MIT",
   "dependencies": {
-    "@ai-sdk/openai": "^2.0.71",
-    "@mastra/core": "latest",
-    "@mastra/evals": "latest",
-    "@mastra/libsql": "latest",
-    "@mastra/memory": "latest",
+    "@ai-sdk/openai": "^1.3.23",
+    "@mastra/core": "^0.13.1",
+    "@mastra/evals": "^0.12.0",
+    "@mastra/libsql": "^0.12.0",
+    "@mastra/memory": "^0.12.0",
     "apify-client": "^2.20.0",
     "dotenv": "^16.4.5",
     "exa-js": "^1.10.2",
