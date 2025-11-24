@@ -22,7 +22,11 @@
     "validate-evals": "tsx src/tests/validate-evals.ts",
     "inspect-training": "tsx src/tests/inspect-training-data.ts",
     "analyze-tokens": "tsx src/tests/analyze-prompt-tokens.ts",
-    "mvp:generate": "tsx src/mvp/test-single-post.ts"
+    "test:exa-answer": "tsx src/insight-network/tools/test-exa-answer.ts",
+    "test:exa-raw": "tsx src/insight-network/tools/test-exa-raw-response.ts",
+    "test:deep-research-raw": "tsx src/insight-network/tools/test-exa-deep-research-raw.ts",
+    "test:deep-research": "tsx src/insight-network/tools/test-deep-research-integration.ts",
+    "test:single-prompt": "tsx src/insight-network/tools/test-single-prompt.ts"
   },
   "keywords": [
     "mastra",
@@ -33,7 +37,7 @@
   "author": "Yash Poddar",
   "license": "MIT",
   "dependencies": {
-    "@ai-sdk/openai": "^0.0.50",
+    "@ai-sdk/openai": "^2.0.71",
     "@mastra/core": "latest",
     "@mastra/evals": "latest",
     "@mastra/libsql": "latest",
