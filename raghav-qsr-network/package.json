@@ -21,7 +21,8 @@
     "test-manual-posts": "tsx src/tests/test-manual-posts.ts",
     "validate-evals": "tsx src/tests/validate-evals.ts",
     "inspect-training": "tsx src/tests/inspect-training-data.ts",
-    "analyze-tokens": "tsx src/tests/analyze-prompt-tokens.ts"
+    "analyze-tokens": "tsx src/tests/analyze-prompt-tokens.ts",
+    "mvp:generate": "tsx src/mvp/test-single-post.ts"
   },
   "keywords": [
     "mastra",
@@ -32,11 +33,14 @@
   "author": "Yash Poddar",
   "license": "MIT",
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.50",
     "@mastra/core": "latest",
     "@mastra/evals": "latest",
+    "@mastra/libsql": "latest",
     "@mastra/memory": "latest",
     "apify-client": "^2.20.0",
     "dotenv": "^16.4.5",
+    "exa-js": "^1.10.2",
     "openai": "^4.0.0",
     "zod": "^3.22.4"
   },
