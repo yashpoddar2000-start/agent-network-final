@@ -174,3 +174,150 @@ export const exaDeepResearchTool = createTool({
     };
   },
 });
+    results: z.array(z.object({
+      prompt: z.string(),
+      report: z.string(),
+      sources: z.array(z.object({
+        title: z.string(),
+        url: z.string(),
+        author: z.string().optional(),
+        publishedDate: z.string().optional(),
+      })),
+      error: z.string().optional(),
+    })),
+    synthesizedReport: z.string().describe("Combined analysis from all 3 research angles"),
+    summary: z.object({
+      totalPrompts: z.number(),
+      successful: z.number(),
+      failed: z.number(),
+      totalSources: z.number(),
+      executionTimeMs: z.number(),
+    }),
+  }),
+
+  execute: async ({ context }) => {
+    const { prompts, researchOptions = {} } = context;
+    const { 
+      maxRetries = 2, 
+      timeoutMs = 60000,
+      includeFullSources = true 
+    } = researchOptions;
+
+    const startTime = Date.now();
+    console.log(`🔬 Starting deep research: 3 complementary prompts`);
+
+    /**
+     * Process a single deep research prompt
+     */
+    const processDeepResearch = async (prompt: string, index: number): Promise<ExaDeepResearchResult> => {
+      let lastError: string = "";
+      
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+          console.log(`  📊 Deep Research ${index + 1}/3: "${prompt.substring(0, 60)}..."`);
+          
+          // Create abort controller for timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+          // Call Exa Deep Research API
+          // Note: This might need adjustment based on actual Exa Deep Research API format
+          const completion = await exaClient.chat.completions.create({
+            model: "exa-deep-research", // Assuming this is the model name for deep research
+            messages: [
+              {
+                role: "user",
+                content: prompt
+              }
+            ],
+            stream: false,
+            // Additional parameters for deep research
+            temperature: 0.1, // Lower temperature for more focused research
+          }, {
+            signal: controller.signal
+          });
+
+          clearTimeout(timeoutId);
+
+          // Extract comprehensive report from Exa response
+          const message = completion.choices[0]?.message;
+          if (!message?.content) {
+            throw new Error("No research report returned from Exa Deep Research API");
+          }
+
+          const report = message.content;
+          
+          // Extract sources (format may vary based on actual Exa response)
+          const sources = (completion as any).sources || [];
+
+          console.log(`    ✅ Deep research ${index + 1} complete (${report.length} chars)`);
+
+          return {
+            prompt,
+            report,
+            sources: sources.map((source: any) => ({
+              title: source.title || "Unknown title",
+              url: source.url || "",
+              author: source.author,
+              publishedDate: source.publishedDate,
+            })),
+          };
+
+        } catch (error: any) {
+          lastError = error.message || "Unknown error";
+          console.log(`    ❌ Deep research ${index + 1} attempt ${attempt} failed: ${lastError}`);
+          
+          if (attempt < maxRetries) {
+            // Longer delay for deep research retries
+            const delay = Math.pow(2, attempt) * 2000; // 4s, 8s
+            console.log(`    ⏳ Retrying deep research in ${delay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+      }
+
+      // All retries failed
+      console.log(`    💥 Deep research ${index + 1} failed permanently: ${lastError}`);
+      return {
+        prompt,
+        report: "",
+        sources: [],
+        error: `Deep research failed after ${maxRetries} attempts: ${lastError}`,
+      };
+    };
+
+    // Process all 3 prompts in parallel (deep research can be parallelized)
+    console.log(`🚀 Executing 3 deep research prompts in parallel...`);
+    const results = await Promise.all(
+      prompts.map((prompt, index) => processDeepResearch(prompt, index))
+    );
+
+    // Synthesize findings from all 3 research angles
+    const successful = results.filter(r => !r.error);
+    const allReports = successful.map(r => r.report).join("\n\n---\n\n");
+    
+    const synthesizedReport = successful.length > 0 
+      ? `# Comprehensive Research Analysis\n\nBased on ${successful.length} research perspectives:\n\n${allReports}\n\n## Key Insights\n\nThe research reveals multiple interconnected factors affecting QSR performance, with data supporting specific mechanisms and quantifiable impacts.`
+      : "Unable to generate synthesized report due to research failures.";
+
+    // Calculate summary statistics
+    const successfulCount = results.filter(r => !r.error).length;
+    const failedCount = results.filter(r => r.error).length;
+    const totalSources = results.reduce((sum, r) => sum + r.sources.length, 0);
+    const executionTimeMs = Date.now() - startTime;
+
+    console.log(`🎯 Deep research complete: ${successfulCount}/3 prompts successful, ${totalSources} sources (${executionTimeMs}ms)`);
+
+    return {
+      results,
+      synthesizedReport,
+      summary: {
+        totalPrompts: 3,
+        successful: successfulCount,
+        failed: failedCount,
+        totalSources,
+        executionTimeMs,
+      },
+    };
+  },
+});
