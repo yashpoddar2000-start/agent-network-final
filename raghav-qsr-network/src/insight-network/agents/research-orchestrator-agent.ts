@@ -1,6 +1,7 @@
 import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
 import { exaAnswerTool, exaDeepResearchTool } from '../tools';
+import { createAgentMemory } from '../memory';
 
 /**
  * Research Orchestrator Agent
@@ -50,6 +51,7 @@ Be strategic with API usage - gather maximum insight with minimum calls.
 `,
 
   model: openai('gpt-4o-mini'), // Use mini for cost efficiency
+  memory: createAgentMemory(),
   
   tools: {
     exaAnswerTool,

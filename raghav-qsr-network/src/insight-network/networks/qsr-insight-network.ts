@@ -1,6 +1,7 @@
 import { NewAgentNetwork } from '@mastra/core/network/vNext';
 import { openai } from '@ai-sdk/openai';
 import { deepResearchPromptAgent, researchOrchestratorAgent } from '../agents';
+import { createNetworkMemory } from '../memory';
 import { RuntimeContext } from '@mastra/core/runtime-context';
 
 /**
@@ -74,6 +75,7 @@ export const qsrInsightNetwork = new NewAgentNetwork({
   `,
   
   model: openai('gpt-4o'),
+  memory: createNetworkMemory(),
   agents: { 
     researchOrchestratorAgent,
     deepResearchPromptAgent 
